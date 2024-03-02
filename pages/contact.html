@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Martinez | Portfolio</title>
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <script>
+      // Makes the screen clickable and changes the email, linkedin, and github text *Mobile Only*
+      // const mediaQuery = window.matchMedia("(max-width: 600px)");
+      // mediaQuery.addListener(changeText);
+      
+       if (window.innerWidth <= 600) {
+        function changeText() {
+          if (
+            // e.matches &&
+            email.textContent === "Email" &&
+            linkedin.textContent === "LinkedIn" &&
+            github.textContent === "GitHub"
+          ) {
+            const emailText = document.getElementById("email");
+            emailText.textContent = "jmart237@asu.edu";
+            const linkedinText = document.getElementById("linkedin");
+            linkedinText.textContent = "linkedin.com/in/obi-juan-kenobi";
+            const githubText = document.getElementById("github");
+            githubText.textContent = "https://github.com/Obi-Juan-Kenobee";
+          } else {
+            const emailText = document.getElementById("email");
+            emailText.textContent = "Email";
+            const linkedinText = document.getElementById("linkedin");
+            linkedinText.textContent = "LinkedIn";
+            const githubText = document.getElementById("github");
+            githubText.textContent = "GitHub";
+          }
+        }
+      }
+      // changeText(mediaQuery);
+    </script>
+  </head>
+  <body>
+    <!-- Nav div styled with flexbox for a linear menu. -->
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <div class="container" onclick="changeText()">
+      <main>
+        <header>
+          <h1>Let's Work Together!</h1>
+          <div class="contact-paragraph">
+            <p>
+              I am currently looking for new opportunities. I love working on
+              challenging projects.
+            </p>
+            <p>
+              I am always open to new opportunities to learn and grow, so feel
+              free to reach out!
+            </p>
+          </div>
+          <h2>Get in touch</h2>
+
+          <p>
+            <a
+              href="#"
+              class="email"
+              data-hover="juanmart237@asu.edu"
+              data-active="I'M ACTIVE"
+              ><span id="email">Email</span></a
+            >
+          </p>
+          <p>
+            <a
+              href="linkedin.com/in/obi-juan-kenobi"
+              class="linkedin"
+              data-hover="linkedin.com/in/obi-juan-kenobi"
+              data-active="I'M ACTIVE"
+              ><span id="linkedin">LinkedIn</span></a
+            >
+          </p>
+          <p>
+            <a
+              href="https://github.com/Obi-Juan-Kenobee"
+              class="github"
+              data-hover="https://github.com/Obi-Juan-Kenobee"
+              data-active="I'M ACTIVE"
+              ><span id="github">GitHub</span></a
+            >
+          </p>
+          
+        </header>
+        <!-- Will turn this into a fully functional Contact form -->
+        <form>
+          <p>You can also leave your information below:</p>
+          <p>
+            Email:
+            <input type="email" value="email" placeholder="Enter your email" />
+          </p>
+          <p>
+            Phone:
+            <input type="tel" value="phone" placeholder="Enter your phone" />
+          </p>
+          <p><input id="submit" type="submit" value="Submit" /></p>
+        </form>
+      </main>
+    </div>
+    <p id="touch">Tap anywhere</p>
+    <footer>
+      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
+    </footer>
+  </body>
+</html>

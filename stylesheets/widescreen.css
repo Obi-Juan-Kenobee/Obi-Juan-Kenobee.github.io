@@ -1,0 +1,246 @@
+/* Juan Martinez
+    Mesa Community College
+    My Portfolio Project
+    2/22/24 */
+    
+    
+    /* default font-family: "Graphik-Semibold"; 
+    once I get a license, I will update this */
+body {
+    font-family: "Graphik-Semibold";
+    background-color: #000000;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+/* page-container for grid styling */
+.page-container {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+/* nav-container for flexbox styling */
+.page-container > .nav-container {
+    grid-column: span 2;
+}
+/* nav {
+    text-align: center;
+    font-size: 1.5em;
+} */
+.nav-container {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+/* link styling */
+a {
+    text-decoration: none;
+    color: #b80b17;
+    font-family: 'Graphik-Semibold';
+    font-weight: bolder;
+    padding: 10px 10px 20px 10px;
+    margin: 0px 50px 0px 50px;
+}
+a:hover {
+    color: #ababab;
+    text-decoration: underline;
+}
+.active {
+    color: #ababab;
+}
+.email, .linkedin, .github {
+    position: relative;
+    display: inline-block;
+    color: #b80b17;
+    text-decoration: none;
+}
+.email span, .linkedin span, .github span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.email:before,
+.email:after, 
+.linkedin:before, 
+.linkedin:after, 
+.github:before, 
+.github:after {
+    content: '';
+    position: absolute;
+    /* top: 0.67em; */
+    left: 0;
+    /* width: 100%; */
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+
+/* :before */
+
+.email:before,
+.linkedin:before,
+.github:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+/* :after */
+
+/* .email:after,
+.linkedin:after,
+.github:after {
+    content: attr(data-active);
+    -webkit-transform: translate(150%,0);
+    -moz-transform: translate(150%,0);
+    -ms-transform: translate(150%,0);
+    -o-transform: translate(150%,0);
+    transform: translate(150%,0);
+} */
+
+/* Span on :hover and :active */
+
+.email:hover span,
+.email:active span,
+.linkedin:hover span,
+.linkedin:active span,
+.github:hover span,
+.github:active span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+/*  
+    We show :before pseudo-element on :hover 
+    and :after pseudo-element on :active 
+*/
+
+.email:hover:before,
+.email:active:after,
+.linkedin:hover:before,
+.linkedin:active:after,
+.github:hover:before,
+.github:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+/* 
+  We hide :before pseudo-element on :active
+*/
+
+.email:active:before,
+.linkedin:active:before,
+.github:active:before {
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.img-container {
+    display: inline-block;
+    background: linear-gradient(
+        to left,
+        black, transparent
+    );
+}
+/* image gradient, was planning a fade effect. It didn't work :(  
+I will fix this in the future */
+#profile {
+    z-index: -1;
+    width: 100%; /*Set to 100% of the img container*/
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+img {
+    width: 100%; /*Set to 100% of the img container*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+/* Main content */
+
+h1 {
+    color: #b80b17;
+    font-size: 8rem;
+    text-align: center;
+}
+header > p, h3, form > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* styling the submit button in the form */
+input[type="submit"] {
+    background-color: #b80b17;
+    border-radius: 5px;
+    border: none;
+    color: #ababab;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+h2 {
+    color: #b80b17;
+    font-size: 5rem;
+    text-align: center;
+}
+#touch {
+    display: none;
+}
+/* footer */
+footer {
+    clear: both;
+    text-align: center;
+    font-size: 1em;
+    color: #ababab;
+    grid-column: span 2;
+}
+/* footer > * {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+} */
+p {
+    color: #ababab;
+}

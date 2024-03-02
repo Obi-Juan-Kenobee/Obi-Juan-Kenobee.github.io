@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Juan Martinez
+        Mesa Community College
+        My Portfolio Project
+        2/22/24 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Martinez | Portfolio</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function changeText() {
+        if (document.getElementById("touch").innerHTML == "Tap anywhere" && document.getElementById("front-end").innerHTML == "Front-End" && document.getElementById("web").innerHTML == "Web" && document.getElementById("developer").innerHTML == "Developer" && document.getElementById("name").innerHTML == "Juan Martinez") {
+          document.getElementById("touch").innerHTML = "Thank you!";
+          document.getElementById("front-end").innerHTML = "Back-End";
+          document.getElementById("web").innerHTML = "Application";
+          document.getElementById("developer").innerHTML = "Developer";
+          document.getElementById("name").innerHTML = "About";
+        }
+        else {
+          document.getElementById("touch").innerHTML = "Tap anywhere";
+          document.getElementById("front-end").innerHTML = "Front-End";
+          document.getElementById("web").innerHTML = "Web";
+          document.getElementById("developer").innerHTML = "Developer";
+          document.getElementById("name").innerHTML = "Juan Martinez";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- This nav container is for the nav bar using flexbox -->
+    <nav>
+      <!-- notice the class "active", to highlight the current active page -->
+      <a class="active" href="index.html">Home</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/contact.html">Contact</a>
+    </nav>
+    <!-- The image container and image gradient divs were to add a gradient to the image, but it didn't work. I will
+    fix this in the future, sorry! -->
+    <div class="container" onclick="changeText()">
+      
+      <div class="img-container">
+        <img id="profile-face" src="assets/JuanM_Face.jpg" alt="Juan Martinez Face Picture" />
+        <img id="profile-bg" src="assets/JuanM_TopBackground.jpg" alt="Juan Martinez Professional" />
+      </div>
+      <main>
+        <header>
+          <!-- Simple header that is also the main content. Simple and to the point -->
+          <h1 id="name">Juan Martinez</h1>
+        </header>
+        <h2 id="front-end">Front-End</h2>
+          <h2 id="web">Web</h2>
+          <h2 id="developer">Developer</h2>
+      </main>
+    </div>
+    <p id="touch">Tap anywhere</p>
+    <footer>
+      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
+    </footer>
+  </body>
+</html>

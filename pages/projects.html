@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Martinez | Portfolio</title>
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <script>
+      function changeText() {
+        if (document.getElementById("python").innerHTML == "Python" && document.getElementById("java").innerHTML == "Java" && document.getElementById("web").innerHTML == "Web Apps/Sites") {
+          document.getElementById("python").innerHTML = "AI/ML Learning";
+          document.getElementById("java").innerHTML = "AI/ML Learning";
+          document.getElementById("web").innerHTML = "AI/ML Learning";
+        }
+        else {
+          document.getElementById("python").innerHTML = "Python";
+          document.getElementById("java").innerHTML = "Java";
+          document.getElementById("web").innerHTML = "Web Apps/Sites";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Nav div styled with flexbox for a linear menu. -->
+    <nav>
+      <a href="../index.html">Home</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container" onclick="changeText()">
+      <main>
+        <header>
+          <!-- Another simple header that is also the main content. I am planning on turning these
+        into animated links that go to the corresponding projects and will change when hovered. -->
+          <h1>Projects</h1>
+          <h2 id="python">Python</h2>
+          <h2 id="java">Java</h2>
+          <h2 id="web">Web Apps/Sites</h2>
+        </header>
+      </main>
+    </div>
+    <p id="touch">Tap anywhere</p>
+    <footer>
+      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
+    </footer>
+  </body>
+</html>
