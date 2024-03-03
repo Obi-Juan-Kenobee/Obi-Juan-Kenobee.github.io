@@ -2,6 +2,10 @@
     Mesa Community College
     Portfolio
     2/22/24 */
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
 body {
   height: 100vh;
   gap: 2rem;
