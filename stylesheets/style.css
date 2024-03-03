@@ -107,6 +107,7 @@ h1 {
   margin: 20px;
   margin-bottom: 0;
   width: 70vw;
+  text-align: center;
 }
 h2 {
   color: #ababab;
@@ -497,4 +498,7 @@ footer {
   #touch {
     grid-column: span 2;
   }
+  .contact-paragraph {
+    text-align: center;
+    }
 }
