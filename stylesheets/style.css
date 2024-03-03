@@ -19,7 +19,7 @@ nav {
   right: 0;
   display: flex;
   width: 80vw;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   gap: 2rem;
   justify-content: space-around;
   align-items: center;
