@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <script>
       function changeText() {
-        if (document.getElementById("python").innerHTML == "Python" && document.getElementById("java").innerHTML == "Java" && document.getElementById("web").innerHTML == "Web Apps/Sites") {
+        if (
+          document.getElementById("python").innerHTML == "Python" &&
+          document.getElementById("java").innerHTML == "Java" &&
+          document.getElementById("web").innerHTML == "Web Apps/Sites"
+        ) {
           document.getElementById("python").innerHTML = "AI/ML Learning";
           document.getElementById("java").innerHTML = "AI/ML Learning";
           document.getElementById("web").innerHTML = "AI/ML Learning";
-        }
-        else {
+        } else {
           document.getElementById("python").innerHTML = "Python";
           document.getElementById("java").innerHTML = "Java";
           document.getElementById("web").innerHTML = "Web Apps/Sites";
@@ -20,14 +23,14 @@
       }
     </script>
   </head>
-  <body>
+  <body onclick="changeText()">
     <!-- Nav div styled with flexbox for a linear menu. -->
     <nav>
       <a href="../index.html">Home</a>
       <a class="active" href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="container" onclick="changeText()">
+    <div class="container">
       <main>
         <header>
           <!-- Another simple header that is also the main content. I am planning on turning these
@@ -38,8 +41,9 @@
           <h2 id="web">Web Apps/Sites</h2>
         </header>
       </main>
+      <p id="touch">Tap anywhere</p>
     </div>
-    <p id="touch">Tap anywhere</p>
+
     <footer>
       <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
     </footer>
