@@ -82,8 +82,11 @@ body {
   
   /* Main Content */
   .main {
-    padding: 3rem;
+    padding: 4rem;
     color: #ababab;
+    margin: 3rem;
+    line-height: 2rem;
+    /* font-weight: 900; */
   }
   
   .summary,
@@ -141,6 +144,9 @@ body {
     background-color: #262626;
     color: #ffffff;
     text-align: center;
+  }
+  footer > p > a {
+    color: #ff6600;
   }
 
   

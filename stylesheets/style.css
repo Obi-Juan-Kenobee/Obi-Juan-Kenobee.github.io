@@ -2,507 +2,653 @@
     Mesa Community College
     Portfolio
     2/22/24 */
-* {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-}
-body {
-  height: 100vh;
-  gap: 2rem;
-  background-color: #000;
-  color: #b80b17;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-}
-nav {
-  position: relative;
-  right: 0;
-  display: flex;
-  width: 80vw;
-  flex-flow: row wrap;
-  gap: 2rem;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-left: 50px;
-}
-nav > a {
-  color: #b80b17;
-  text-decoration: none;
-  font-size: 1.5em;
-  padding: 0 20px;
-}
-nav > a:hover {
-  color: #ff6600;
-  text-decoration: underline;
-}
-.active {
-  color: #ababab;
-}
-.container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  justify-content: center;
-}
-#touch {
-  color: #ababab;
-  font-family: "Montserrat-Italic";
-  font-weight: 900;
-  font-size: 2em;
-  font-style: italic;
-  text-align: center;
-  justify-self: center;
-  align-self: flex-end;
-  animation: bounce 1s infinite;
-}
-/* text bouncing anymation */
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-.email,
-.linkedin,
-.github {
-  text-decoration: none;
-  color: #ababab;
-}
-p {
-  font-weight: 900;
-}
-#profile-bg {
-  display: none;
-}
-#profile-face {
-  /* width: 100%; */
-  max-width: 400px;
-  border-radius: 50%;
-  /* border-radius: 50%; */
-  border: 3px solid #ababab;
-  object-fit: contain;
-}
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-h1 {
-  color: #ababab;
-  font-size: 3rem;
-  font-weight: 900;
-  padding-top: 50px;
-  margin: auto;
-  text-align: center;
-}
-.contact-paragraph {
-  margin: 20px;
-  margin-bottom: 0;
-  width: 70vw;
-  text-align: center;
-}
-h2 {
-  color: #ababab;
-  font-size: 2rem;
-  font-weight: 900;
-  margin: 10px;
-  text-align: center;
-}
-p > a {
-  font-size: 1.5rem;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-input {
-  background-color: #ababab;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
-}
-#submit {
-  animation: bounce 1s infinite;
-}
-input[type="submit"] {
-  width: 100px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  cursor: pointer;
-  color: #b80b17;
-}
-footer {
-  text-align: center;
-  font-size: 1rem;
-}
-
-@media screen and (min-width: 1024px) {
-  nav {
-    margin: auto;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 0.5fr auto;
-    grid-template-rows: 1fr;
-    overflow-x: auto;
-  }
-  /* contact form link styling */
-  /* email */
-  .email,
-  .linkedin,
-  .github {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #b80b17;
-    text-decoration: none;
-  }
-  .email span,
-  .linkedin span,
-  .github span {
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    -o-transition: 0.6s;
-    transition: 0.6s;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-  .email:before,
-  .email:after,
-  .linkedin:before,
-  .linkedin:after,
-  .github:before,
-  .github:after {
-    content: "";
-    position: absolute;
-    /* top: 0.67em; */
-    left: 0;
-    /* width: 250px; */
-    text-align: center;
-    opacity: 0;
-    -webkit-transition: 0.4s, opacity 0.6s;
-    -moz-transition: 0.4s, opacity 0.6s;
-    -o-transition: 0.4s, opacity 0.6s;
-    transition: 0.4s, opacity 0.6s;
-  }
-
-  /* :before */
-
-  .email:before,
-  .linkedin:before,
-  .github:before {
-    content: attr(data-hover);
-    -webkit-transform: translate(-150%, 0);
-    -moz-transform: translate(-150%, 0);
-    -ms-transform: translate(-150%, 0);
-    -o-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
-  }
-
-  /* Span on :hover and :active */
-
-  .email:hover span,
-  .email:active span,
-  .linkedin:hover span,
-  .linkedin:active span,
-  .github:hover span,
-  .github:active span {
-    opacity: 0;
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    -ms-transform: scale(0.3);
-    -o-transform: scale(0.3);
-    transform: scale(0.3);
-  }
-
-  /*  
+    * {
+      box-sizing: border-box;
+    }
+    :root {
+      --bar-width: 50px;
+      --bar-height: 5px;
+      --hamburger-gap: 6px;
+      --foreground: #b80b17;
+      --background: white;
+      --hamburger-margin: 8px;
+      --animation-timing: 200ms ease-in-out;
+      --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }
+    
+    .hamburger-menu {
+      --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    
+      display: flex;
+      flex-direction: column;
+      gap: var(--hamburger-gap);
+      width: max-content;
+      position: absolute;
+      top: var(--hamburger-margin);
+      left: var(--hamburger-margin);
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    .hamburger-menu:has(input:checked) {
+      --foreground: white;
+      --background: #333;
+    }
+    
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+      border: 1px solid var(--background);
+      box-shadow: 0 0 0 1px var(--foreground);
+    }
+    
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+      content: "";
+      width: var(--bar-width);
+      height: var(--bar-height);
+      background-color: var(--foreground);
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+    }
+    
+    .hamburger-menu input {
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      pointer-events: none;
+    }
+    
+    .hamburger-menu:has(input:checked)::before {
+      rotate: 45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / -2);
+    }
+    
+    .hamburger-menu:has(input:checked)::after {
+      rotate: -45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / 2);
+    }
+    
+    .hamburger-menu input:checked {
+      opacity: 0;
+      width: 0;
+    }
+    
+    .sidebar {
+      transition: translate var(--animation-timing);
+      translate: -100%;
+      padding: 0.5rem 1rem;
+      padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+      background-color: var(--foreground);
+      color: var(--background);
+      max-width: 10rem;
+      min-height: 15vh;
+    }
+    
+    .hamburger-menu:has(input:checked) + .sidebar {
+      translate: 0;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      gap: 2rem;
+      background-color: #000;
+      color: #b80b17;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 900;
+    }
+    nav > a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1.5em;
+      padding: 0 0px;
+    }
+    nav > a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+    .active {
+      color: #fff;
+    }
+    .desktop {
+      display: none;
+      position: absolute;
+      top: -60px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      justify-content: center;
+    }
+    #touch {
+      color: #ababab;
+      font-family: "Montserrat-Italic";
+      font-weight: 900;
+      font-size: 2em;
+      font-style: italic;
+      text-align: center;
+      justify-self: center;
+      align-self: flex-end;
+      animation: bounce 1s infinite;
+    }
+    /* text bouncing anymation */
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+    .email,
+    .linkedin,
+    .github {
+      text-decoration: none;
+      color: #ababab;
+    }
+    p {
+      font-weight: 900;
+    }
+    #profile-bg {
+      display: none;
+    }
+    #profile-face {
+      /* width: 100%; */
+      max-width: 400px;
+      border-radius: 50%;
+      /* border-radius: 50%; */
+      border: 3px solid #ababab;
+      object-fit: contain;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    h1 {
+      color: #ababab;
+      font-size: 3rem;
+      font-weight: 900;
+      margin: auto;
+      text-align: center;
+    }
+    .contact-paragraph {
+      margin: 20px;
+      margin-bottom: 0;
+      width: 70vw;
+      text-align: center;
+    }
+    h2 {
+      color: #ababab;
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 10px;
+      text-align: center;
+    }
+    p > a {
+      font-size: 1.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    input {
+      background-color: #ababab;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      width: 300px;
+    }
+    #submit {
+      animation: bounce 1s infinite;
+    }
+    input[type="submit"] {
+      width: 100px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 900;
+      cursor: pointer;
+      color: #b80b17;
+    }
+    footer {
+      text-align: center;
+      font-size: 1rem;
+    }
+    
+    @media screen and (min-width: 1024px) {
+      .hamburger-menu {
+        position: absolute;
+        display: none;
+      }
+      .sidebar > nav {
+        position: absolute;
+        display: none;
+      }
+      .desktop {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+    
+        margin: auto;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        gap: 2rem;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+      nav > a {
+        color: #b80b17;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 0 0px;
+      }
+      nav > a:hover {
+        color: #ff6600;
+        text-decoration: underline;
+      }
+      .active {
+        color: #ababab;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 0.5fr auto;
+        grid-template-rows: 1fr;
+        overflow-x: auto;
+      }
+      /* contact form link styling */
+      /* email */
+      .email,
+      .linkedin,
+      .github {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #b80b17;
+        text-decoration: none;
+      }
+      .email span,
+      .linkedin span,
+      .github span {
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transition-delay: 0.2s;
+        -moz-transition-delay: 0.2s;
+        -o-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+      }
+      .email:before,
+      .email:after,
+      .linkedin:before,
+      .linkedin:after,
+      .github:before,
+      .github:after {
+        content: "";
+        position: absolute;
+        /* top: 0.67em; */
+        left: 0;
+        /* width: 250px; */
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: 0.4s, opacity 0.6s;
+        -moz-transition: 0.4s, opacity 0.6s;
+        -o-transition: 0.4s, opacity 0.6s;
+        transition: 0.4s, opacity 0.6s;
+      }
+    
+      /* :before */
+    
+      .email:before,
+      .linkedin:before,
+      .github:before {
+        content: attr(data-hover);
+        -webkit-transform: translate(-150%, 0);
+        -moz-transform: translate(-150%, 0);
+        -ms-transform: translate(-150%, 0);
+        -o-transform: translate(-150%, 0);
+        transform: translate(-150%, 0);
+      }
+    
+      /* Span on :hover and :active */
+    
+      .email:hover span,
+      .email:active span,
+      .linkedin:hover span,
+      .linkedin:active span,
+      .github:hover span,
+      .github:active span {
+        opacity: 0;
+        -webkit-transform: scale(0.3);
+        -moz-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+        -o-transform: scale(0.3);
+        transform: scale(0.3);
+      }
+    
+      /*  
         We show :before pseudo-element on :hover 
         and :after pseudo-element on :active 
     */
-
-  .email:hover:before,
-  .email:active:after,
-  .linkedin:hover:before,
-  .linkedin:active:after,
-  .github:hover:before,
-  .github:active:after {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    -o-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-  }
-
-  /* 
+    
+      .email:hover:before,
+      .email:active:after,
+      .linkedin:hover:before,
+      .linkedin:active:after,
+      .github:hover:before,
+      .github:active:after {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition-delay: 0.4s;
+        -moz-transition-delay: 0.4s;
+        -o-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+      }
+    
+      /* 
       We hide :before pseudo-element on :active
     */
-
-  .email:active:before,
-  .linkedin:active:before,
-  .github:active:before {
-    -webkit-transform: translate(-150%, 0);
-    -moz-transform: translate(-150%, 0);
-    -ms-transform: translate(-150%, 0);
-    -o-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-  }
-  .img-container {
-    display: inline-block;
-    background: linear-gradient(to left, black, transparent);
-  }
-  /* image gradient, was planning a fade effect. It didn't work :(  
+    
+      .email:active:before,
+      .linkedin:active:before,
+      .github:active:before {
+        -webkit-transform: translate(-150%, 0);
+        -moz-transform: translate(-150%, 0);
+        -ms-transform: translate(-150%, 0);
+        -o-transform: translate(-150%, 0);
+        transform: translate(-150%, 0);
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+      }
+      .img-container {
+        display: inline-block;
+        background: linear-gradient(to left, black, transparent);
+      }
+      /* image gradient, was planning a fade effect. It didn't work :(  
     I will fix this in the future */
-  /* #profile-bg {
+      /* #profile-bg {
         z-index: -1;
         position: relative;
         top: 0;
         left: 0;
       } */
-  #profile-face {
-    display: none;
-  }
-  #profile-bg {
-    z-index: -1;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    max-width: 700px;
-  }
-  /* Main content */
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  h1 {
-    color: #b80b17;
-    font-size: 8rem;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
-  }
-  .contact-paragraph {
-    text-align: center;
-  }
-  p {
-    color: #ababab;
-  }
-  header > p,
-  h3,
-  form > p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  /* styling the submit button in the form */
-  input[type="submit"] {
-    background-color: #b80b17;
-    border-radius: 5px;
-    border: none;
-    color: #ababab;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-  }
-  #submit:hover {
-    color: #ababab;
-    background-color: #ff6600;
-  }
-  /* footer */
-  h2 {
-    color: #b80b17;
-    font-size: 5rem;
-    text-align: center;
-  }
-  #touch {
-    display: none;
-  }
-  /* footer */
-  footer {
-    color: #ababab;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 1023px) {
-  nav {
-    margin: auto;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 0.5fr 0.2fr;
-    margin: 40px 15px;
-    align-items: center;
-    max-height: 85svh;
-  }
-  .email,
-  .linkedin,
-  .github {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #b80b17;
-    text-decoration: none;
-  }
-  .email span,
-  .linkedin span,
-  .github span {
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    -o-transition: 0.6s;
-    transition: 0.6s;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-  .email:before,
-  .email:after,
-  .linkedin:before,
-  .linkedin:after,
-  .github:before,
-  .github:after {
-    content: "";
-    position: absolute;
-    /* top: 0.67em; */
-    left: 0;
-    /* width: 250px; */
-    text-align: center;
-    opacity: 0;
-    -webkit-transition: 0.4s, opacity 0.6s;
-    -moz-transition: 0.4s, opacity 0.6s;
-    -o-transition: 0.4s, opacity 0.6s;
-    transition: 0.4s, opacity 0.6s;
-  }
-
-  /* :before */
-
-  .email:before,
-  .linkedin:before,
-  .github:before {
-    content: attr(data-hover);
-    -webkit-transform: translate(-150%, 0);
-    -moz-transform: translate(-150%, 0);
-    -ms-transform: translate(-150%, 0);
-    -o-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
-  }
-
-  /* Span on :hover and :active */
-
-  .email:hover span,
-  .email:active span,
-  .linkedin:hover span,
-  .linkedin:active span,
-  .github:hover span,
-  .github:active span {
-    opacity: 0;
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    -ms-transform: scale(0.3);
-    -o-transform: scale(0.3);
-    transform: scale(0.3);
-  }
-
-  /*  
+      #profile-face {
+        display: none;
+      }
+      #profile-bg {
+        z-index: -1;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        max-width: 700px;
+      }
+      /* Main content */
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        color: #b80b17;
+        font-size: 8rem;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+      }
+      .contact-paragraph {
+        text-align: center;
+      }
+      p {
+        color: #ababab;
+      }
+      header > p,
+      h3,
+      form > p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      /* styling the submit button in the form */
+      input[type="submit"] {
+        background-color: #b80b17;
+        border-radius: 5px;
+        border: none;
+        color: #ababab;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+      }
+      #submit:hover {
+        color: #ababab;
+        background-color: #ff6600;
+      }
+      /* footer */
+      h2 {
+        color: #b80b17;
+        font-size: 5rem;
+        text-align: center;
+      }
+      #touch {
+        display: none;
+      }
+      /* footer */
+      footer {
+        color: #ababab;
+      }
+    }
+    @media screen and (min-width: 601px) and (max-width: 1023px) {
+      .hamburger-menu {
+        display: none;
+        position: absolute;
+      }
+      .navbar {
+        display: none;
+        position: absolute;
+      }
+      .mobile {
+        display: none;
+        position: absolute;
+      }
+      .desktop {
+        position: absolute;
+        top: 20px;
+        left: 80px;
+        margin: auto;
+        z-index: 10;
+    
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        gap: 2rem;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+      nav > a {
+        color: #b80b17;
+      }
+      .active {
+        color: #ababab;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 0.5fr 0.2fr;
+        margin: 40px;
+        align-items: center;
+        max-height: 85svh;
+      }
+      .email,
+      .linkedin,
+      .github {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #b80b17;
+        text-decoration: none;
+      }
+      .email span,
+      .linkedin span,
+      .github span {
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transition-delay: 0.2s;
+        -moz-transition-delay: 0.2s;
+        -o-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+      }
+      .email:before,
+      .email:after,
+      .linkedin:before,
+      .linkedin:after,
+      .github:before,
+      .github:after {
+        content: "";
+        position: absolute;
+        /* top: 0.67em; */
+        left: 0;
+        /* width: 250px; */
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: 0.4s, opacity 0.6s;
+        -moz-transition: 0.4s, opacity 0.6s;
+        -o-transition: 0.4s, opacity 0.6s;
+        transition: 0.4s, opacity 0.6s;
+      }
+    
+      /* :before */
+    
+      .email:before,
+      .linkedin:before,
+      .github:before {
+        content: attr(data-hover);
+        -webkit-transform: translate(-150%, 0);
+        -moz-transform: translate(-150%, 0);
+        -ms-transform: translate(-150%, 0);
+        -o-transform: translate(-150%, 0);
+        transform: translate(-150%, 0);
+      }
+    
+      /* Span on :hover and :active */
+    
+      .email:hover span,
+      .email:active span,
+      .linkedin:hover span,
+      .linkedin:active span,
+      .github:hover span,
+      .github:active span {
+        opacity: 0;
+        -webkit-transform: scale(0.3);
+        -moz-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+        -o-transform: scale(0.3);
+        transform: scale(0.3);
+      }
+    
+      /*  
         We show :before pseudo-element on :hover 
         and :after pseudo-element on :active 
     */
-
-  .email:hover:before,
-  .email:active:after,
-  .linkedin:hover:before,
-  .linkedin:active:after,
-  .github:hover:before,
-  .github:active:after {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    -o-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-  }
-
-  /* 
+    
+      .email:hover:before,
+      .email:active:after,
+      .linkedin:hover:before,
+      .linkedin:active:after,
+      .github:hover:before,
+      .github:active:after {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-transition-delay: 0.4s;
+        -moz-transition-delay: 0.4s;
+        -o-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+      }
+    
+      /* 
       We hide :before pseudo-element on :active
     */
-
-  .email:active:before,
-  .linkedin:active:before,
-  .github:active:before {
-    -webkit-transform: translate(-150%, 0);
-    -moz-transform: translate(-150%, 0);
-    -ms-transform: translate(-150%, 0);
-    -o-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-  }
-  .img-container {
-    text-align: center;
-  }
-  #profile-face {
-    border: #ff6600 3px solid;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-  }
-  #touch {
-    grid-column: span 2;
-  }
-  .contact-paragraph {
-    text-align: center;
+    
+      .email:active:before,
+      .linkedin:active:before,
+      .github:active:before {
+        -webkit-transform: translate(-150%, 0);
+        -moz-transform: translate(-150%, 0);
+        -ms-transform: translate(-150%, 0);
+        -o-transform: translate(-150%, 0);
+        transform: translate(-150%, 0);
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+      }
+      .img-container {
+        text-align: center;
+      }
+      #profile-face {
+        border: #ff6600 3px solid;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      }
+      #touch {
+        grid-column: span 2;
+      }
+      .contact-paragraph {
+        text-align: center;
+      }
     }
-}

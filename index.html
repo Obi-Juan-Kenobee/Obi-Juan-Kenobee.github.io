@@ -41,9 +41,25 @@
   </head>
   <body onclick="changeText()">
     <!-- This nav container is for the nav bar using flexbox -->
-    <nav>
-      <!-- notice the class "active", to highlight the current active page -->
+    <!-- <nav>
       <a class="active" href="index.html">Home</a>
+      <a href="pages/resume.html">Resume</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/contact.html">Contact</a>
+    </nav> -->
+    <label class="hamburger-menu">
+      <input type="checkbox" />
+    </label>
+    <aside class="sidebar">
+      <nav class="mobile">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/resume.html">Resume</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="pages/contact.html">Contact</a>
+      </nav>
+    </aside>
+    <nav class="desktop">
+      <a href="index.html" class="active">Home</a>
       <a href="pages/resume.html">Resume</a>
       <a href="pages/projects.html">Projects</a>
       <a href="pages/contact.html">Contact</a>

@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <script>
       function changeText() {
-        if (
-          document.getElementById("python").innerHTML == "Python" &&
-          document.getElementById("java").innerHTML == "Java" &&
-          document.getElementById("web").innerHTML == "Web Apps/Sites"
-        ) {
+        if (document.getElementById("python").innerHTML == "Python" && document.getElementById("java").innerHTML == "Java" && document.getElementById("web").innerHTML == "Web Apps/Sites") {
           document.getElementById("python").innerHTML = "AI/ML Learning";
           document.getElementById("java").innerHTML = "AI/ML Learning";
           document.getElementById("web").innerHTML = "AI/ML Learning";
-        } else {
+        }
+        else {
           document.getElementById("python").innerHTML = "Python";
           document.getElementById("java").innerHTML = "Java";
           document.getElementById("web").innerHTML = "Web Apps/Sites";
@@ -25,10 +22,21 @@
   </head>
   <body onclick="changeText()">
     <!-- Nav div styled with flexbox for a linear menu. -->
-    <nav>
+    <label class="hamburger-menu">
+      <input type="checkbox" />
+    </label>
+    <aside class="sidebar">
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </aside>
+    <nav class="desktop">
       <a href="../index.html">Home</a>
       <a href="resume.html">Resume</a>
-      <a class="active" href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
@@ -44,7 +52,7 @@
       </main>
       <p id="touch">Tap anywhere</p>
     </div>
-
+    
     <footer>
       <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
     </footer>
