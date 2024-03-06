@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juan Martinez | Contact</title>
-    <link rel="stylesheet" href="../stylesheets/style.css" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    >
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
       // Makes the screen clickable and changes the email, linkedin, and github text *Mobile Only*
       // const mediaQuery = window.matchMedia("(max-width: 600px)");
       // mediaQuery.addListener(changeText);
-      
-        function changeText() {
-          if (
-            // e.matches &&
-            email.textContent === "Email" &&
-            linkedin.textContent === "LinkedIn" &&
-            github.textContent === "GitHub"
-          ) {
-            const emailText = document.getElementById("email");
-            emailText.textContent = "jmart237@asu.edu";
-            const linkedinText = document.getElementById("linkedin");
-            linkedinText.textContent = "linkedin.com/in/obi-juan-kenobi";
-            const githubText = document.getElementById("github");
-            githubText.textContent = "https://github.com/Obi-Juan-Kenobee";
-          } else {
-            const emailText = document.getElementById("email");
-            emailText.textContent = "Email";
-            const linkedinText = document.getElementById("linkedin");
-            linkedinText.textContent = "LinkedIn";
-            const githubText = document.getElementById("github");
-            githubText.textContent = "GitHub";
-          }
+
+      function changeText() {
+        if (
+          // e.matches &&
+          email.textContent === "Email" &&
+          linkedin.textContent === "LinkedIn" &&
+          github.textContent === "GitHub"
+        ) {
+          const emailText = document.getElementById("email");
+          emailText.textContent = "jmart237@asu.edu";
+          const linkedinText = document.getElementById("linkedin");
+          linkedinText.textContent = "linkedin.com/in/obi-juan-kenobi";
+          const githubText = document.getElementById("github");
+          githubText.textContent = "https://github.com/Obi-Juan-Kenobee";
+        } else {
+          const emailText = document.getElementById("email");
+          emailText.textContent = "Email";
+          const linkedinText = document.getElementById("linkedin");
+          linkedinText.textContent = "LinkedIn";
+          const githubText = document.getElementById("github");
+          githubText.textContent = "GitHub";
         }
+      }
       // changeText(mediaQuery);
     </script>
   </head>
   <body onclick="changeText()">
-    <!-- Nav div styled with flexbox for a linear menu. -->
-    <label class="hamburger-menu">
-      <input type="checkbox" >
-    </label>
-    <aside class="sidebar">
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </aside>
-    <nav class="desktop">
+    <div class="topnav" id="myTopnav">
       <a href="../index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html" class="active">Contact</a>
-    </nav>
+      <a href="javascript:void(0);" id="burger-menu" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
     <div class="container">
       <main>
         <header>
@@ -103,27 +107,26 @@
               ><span id="github">GitHub</span></a
             >
           </p>
-          
         </header>
         <!-- Will turn this into a fully functional Contact form -->
         <form>
           <p>You can also leave your information below:</p>
-          <p>
-            Email:
-            <input type="email" value="email" placeholder="Enter your email" >
-          </p>
-          <p>
-            Phone:
-            <input type="tel" value="phone" placeholder="Enter your phone" >
-          </p>
-          <p><input id="submit" type="submit" value="Submit" ></p>
+          <p><label for="name">*Name:</label>
+            <input type="text" value="name" placeholder="Enter your name" required /></p>
+            <p><label for="email">*Email:</label> <input type="email" value="email" placeholder="Enter your email" required /></p>
+          
+          <div class="form-field">
+            <label for="message">*Message:</label>
+          <textarea name="message" id="message" cols="30" rows="3" placeholder="Enter your message" required></textarea>
+          </div>
+          <p><input id="submit" type="submit" value="Submit" /></p>
         </form>
       </main>
       <p id="touch">Tap anywhere</p>
     </div>
-    
+
     <footer>
-      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br>
+      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
       <small>jmart237@asu.edu</small>
     </footer>
   </body>

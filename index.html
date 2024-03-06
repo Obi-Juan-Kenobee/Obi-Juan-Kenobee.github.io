@@ -5,17 +5,27 @@
         Mesa Community College
         My Portfolio Project
         2/22/24 -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juan Martinez | Portfolio</title>
-    <link rel="stylesheet" href="stylesheets/style.css" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    >
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
+      // toggle between removing and adding the "responsive" class to topnav when the user clicks on the icon
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
       function changeText() {
         if (
           document.getElementById("touch").innerHTML == "Tap anywhere" &&
@@ -40,30 +50,15 @@
     </script>
   </head>
   <body onclick="changeText()">
-    <!-- This nav container is for the nav bar using flexbox -->
-    <!-- <nav>
-      <a class="active" href="index.html">Home</a>
-      <a href="pages/resume.html">Resume</a>
-      <a href="pages/projects.html">Projects</a>
-      <a href="pages/contact.html">Contact</a>
-    </nav> -->
-    <label class="hamburger-menu">
-      <input type="checkbox" >
-    </label>
-    <aside class="sidebar">
-      <nav class="mobile">
-        <a href="index.html" class="active">Home</a>
-        <a href="pages/resume.html">Resume</a>
-        <a href="pages/projects.html">Projects</a>
-        <a href="pages/contact.html">Contact</a>
-      </nav>
-    </aside>
-    <nav class="desktop">
+    <div class="topnav" id="myTopnav">
       <a href="index.html" class="active">Home</a>
       <a href="pages/resume.html">Resume</a>
       <a href="pages/projects.html">Projects</a>
       <a href="pages/contact.html">Contact</a>
-    </nav>
+      <a href="javascript:void(0);" id="burger-menu" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <!-- The image container and image gradient divs were to add a gradient to the image, but it didn't work. I will
     fix this in the future, sorry! -->
     <div class="container">
@@ -72,12 +67,12 @@
           id="profile-face"
           src="assets/JuanM_Face.jpg"
           alt="Juan Martinez Face Picture"
-        >
+        />
         <img
           id="profile-bg"
           src="assets/JuanM_TopBackground.jpg"
           alt="Juan Martinez Professional"
-        >
+        />
       </div>
       <main>
         <header>
@@ -92,7 +87,7 @@
     </div>
 
     <footer>
-      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br>
+      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
       <small>jmart237@asu.edu</small>
     </footer>
   </body>

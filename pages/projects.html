@@ -11,7 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
       function changeText() {
         if (document.getElementById("python").innerHTML == "Python" && document.getElementById("java").innerHTML == "Java" && document.getElementById("web").innerHTML == "Web Apps/Sites") {
           document.getElementById("python").innerHTML = "AI/ML Learning";
@@ -27,24 +39,15 @@
     </script>
   </head>
   <body onclick="changeText()">
-    <!-- Nav div styled with flexbox for a linear menu. -->
-    <label class="hamburger-menu">
-      <input type="checkbox" >
-    </label>
-    <aside class="sidebar">
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </aside>
-    <nav class="desktop">
+    <div class="topnav" id="myTopnav">
       <a href="../index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
-    </nav>
+      <a href="javascript:void(0);" id="burger-menu" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <div class="container">
       <main>
         <header>
