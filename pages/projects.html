@@ -15,30 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      function changeText() {
-        if (document.getElementById("python").innerHTML == "Python" && document.getElementById("java").innerHTML == "Java" && document.getElementById("web").innerHTML == "Web Apps/Sites") {
-          document.getElementById("python").innerHTML = "AI/ML Learning";
-          document.getElementById("java").innerHTML = "AI/ML Learning";
-          document.getElementById("web").innerHTML = "AI/ML Learning";
-        }
-        else {
-          document.getElementById("python").innerHTML = "Python";
-          document.getElementById("java").innerHTML = "Java";
-          document.getElementById("web").innerHTML = "Web Apps/Sites";
-        }
-      }
-    </script>
   </head>
-  <body onclick="changeText()">
+  <body>
     <div class="topnav" id="myTopnav">
       <a href="../index.html">Home</a>
       <a href="resume.html">Resume</a>
@@ -66,5 +44,7 @@
       <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br>
       <small>jmart237@asu.edu</small>
     </footer>
+
+    <script src="../scripts/main.js"></script>
   </body>
 </html>

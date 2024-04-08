@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* stylesheets/calculator.css to make it look like a calculator */
+        body {
+            background-color: #333;
+            color: white;
+            font-size: 2rem;
+        }
+        nav {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+        nav a:hover {
+            color: #B80B17;
+        }
+        form {
+            margin: auto;
+            width: 260px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #B80B17;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff6600;
+        }
+        #result {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 601px) {
+            form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+    </nav>
+    <form>
+        <h1>Calculator</h1>
+        Value 1: <input type="text" placeholder="Enter value 1" id="value1">
+        Value 2: <input type="text" placeholder="Enter value 2" id="value2">
+        Operator: 
+        <select id="operator">
+            <option value="+">Add</option>
+            <option value="-">Subtract</option>
+            <option value="*">Multiply</option>
+            <option value="/">Divide</option>
+            <option value="%">Remainder</option>
+        </select>
+        <button type="button" onclick="calculate()">Calculate</button>
+
+        <h2 id="result"></h2>
+
+        <script src="../scripts/main.js"></script>
+    </form>
+</body>
+</html>

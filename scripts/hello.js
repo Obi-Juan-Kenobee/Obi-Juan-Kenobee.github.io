@@ -1,1 +1,1 @@
-alert("This page was created by Juan Martinez.");
+// alert("This page was created by Juan Martinez.");

@@ -16,40 +16,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      // toggle between removing and adding the "responsive" class to topnav when the user clicks on the icon
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
+    <style>
+      /* temporary styles for project */
+      #calculator {
+        grid-column: span 2;
       }
-      function changeText() {
-        if (
-          document.getElementById("touch").innerHTML == "Tap anywhere" &&
-          document.getElementById("front-end").innerHTML == "Front-End" &&
-          document.getElementById("web").innerHTML == "Web" &&
-          document.getElementById("developer").innerHTML == "Developer" &&
-          document.getElementById("name").innerHTML == "Juan Martinez"
-        ) {
-          document.getElementById("touch").innerHTML = "Thank you!";
-          document.getElementById("front-end").innerHTML = "Back-End";
-          document.getElementById("web").innerHTML = "Application";
-          document.getElementById("developer").innerHTML = "Developer";
-          document.getElementById("name").innerHTML = "About";
-        } else {
-          document.getElementById("touch").innerHTML = "Tap anywhere";
-          document.getElementById("front-end").innerHTML = "Front-End";
-          document.getElementById("web").innerHTML = "Web";
-          document.getElementById("developer").innerHTML = "Developer";
-          document.getElementById("name").innerHTML = "Juan Martinez";
-        }
+      button {
+        background-color: #B80B17;
+        width: 180px;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 70%;
+        margin-right: 0;
+        cursor: pointer;
+        border-radius: 12px;
       }
-    </script>
+      button > a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+    </style>
   </head>
-  <body onclick="changeText()">
+  <body>
     <div class="topnav" id="myTopnav">
       <a href="index.html" class="active">Home</a>
       <a href="pages/resume.html">Resume</a>
@@ -82,8 +77,12 @@
         <h2 id="front-end">Front-End</h2>
         <h2 id="web">Web</h2>
         <h2 id="developer">Developer</h2>
+        <p style="font-size: 15px; text-align: center;">*This website is still under construction.*</p>
       </main>
       <p id="touch">Tap anywhere</p>
+      <div id="calculator">
+      <button><a href="pages/calculator.html">Calculator</a></button>
+      </div>
     </div>
 
     <footer>
@@ -91,6 +90,6 @@
       <small>jmart237@asu.edu</small>
     </footer>
 
-    <script src="scripts/hello.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
