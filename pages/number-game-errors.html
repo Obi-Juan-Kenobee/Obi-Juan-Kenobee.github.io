@@ -68,7 +68,7 @@
 
   const guesses = document.querySelector('.guesses');
   const lastResult = document.querySelector('.lastResult');
-  const lowOrHi = document.querySelector('.lowOrHi'); // added a period at the beginning of class selector.
+  const lowOrHi = document.querySelector('.lowOrHi'); // added a period at the beginning of class selector. Syntax error.
   const guessSubmit = document.querySelector('.guessSubmit');
   const guessField = document.querySelector('.guessField');
 
@@ -105,7 +105,7 @@
     guessField.value = '';
     guessField.focus();
   }
-  guessSubmit.addEventListener('click', checkGuess); // capitalized the E in event.
+  guessSubmit.addEventListener('click', checkGuess); // capitalized the E in event. Syntax error.
 
   function setGameOver() {
 	  guessField.disabled = true;
@@ -113,7 +113,7 @@
 	  resetButton = document.createElement('button');
 	  resetButton.textContent = 'Start new game';
 	  document.body.appendChild(resetButton);
-	  resetButton.addEventListener('click', resetGame); // capitalized E in event.
+	  resetButton.addEventListener('click', resetGame); // capitalized E in event. Syntax error.
   }
 
   function resetGame() {
