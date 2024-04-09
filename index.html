@@ -18,20 +18,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       /* temporary styles for project */
-      #calculator {
+      #homework {
         grid-column: span 2;
       }
-      button {
+
+      #numberGame {
         background-color: #B80B17;
         width: 180px;
         border: none;
         color: white;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
+        display: inline;
         font-size: 16px;
-        margin-left: 70%;
-        margin-right: 0;
+        float: left;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      #calculator {
+        background-color: #B80B17;
+        width: 180px;
+        border: none;
+        color: white;
+        text-align: center;
+        display: inline;
+        font-size: 16px;
+        float: inline-end;
         cursor: pointer;
         border-radius: 12px;
       }
@@ -40,7 +51,7 @@
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 1.5rem;
+        /* font-size: 1.1rem; */
       }
     </style>
   </head>
@@ -80,8 +91,9 @@
         <p style="font-size: 15px; text-align: center;">*This website is still under construction.*</p>
       </main>
       <p id="touch">Tap anywhere</p>
-      <div id="calculator">
-      <button><a href="pages/calculator.html">Calculator</a></button>
+      <div id="homework">
+        <button id="numberGame"><a href="./pages/number-game-errors.html">Number Guessing Game</a></button>
+      <button id="calculator"><a href="pages/calculator.html">Calculator</a></button>
       </div>
     </div>
 
