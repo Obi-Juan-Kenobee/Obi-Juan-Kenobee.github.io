@@ -7,28 +7,43 @@
         CIS 166 Number Games -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Calculator</title>
     <style>
-        /* styles to make it look like a calculator */
+        /* styles for calculator */
         body {
             background-color: #333;
             color: white;
             font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-align: center;
+            margin: 0;
+            padding: 0;
         }
         nav {
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             text-align: right;
             margin-bottom: 20px;
         }
         nav a {
-            color: white;
+            color: #B80B17;
             text-decoration: none;
             margin: 10px;
         }
         nav a:hover {
-            color: #B80B17;
+            color: #ff6600;
         }
         form {
             margin: auto;
@@ -43,12 +58,16 @@
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
         }
         select {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
         }
         button {
             width: 100%;
@@ -57,7 +76,7 @@
             border-radius: 10px;
             background-color: #B80B17;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             cursor: pointer;
         }
         button:hover {
@@ -76,7 +95,7 @@
 </head>
 <body>
     <nav>
-        <a href="../index.html">Home</a>
+        <a href="../../index.html">Home</a>
     </nav>
     <form>
         <h1>Calculator</h1>
@@ -94,7 +113,7 @@
 
         <h2 id="result"></h2>
 
-        <script src="../scripts/main.js"></script>
+        <script src="../../scripts/main.js"></script>
     </form>
 </body>
 </html>
