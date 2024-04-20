@@ -395,6 +395,25 @@ footer {
     align-self: center;
     justify-self: center;
   }
+  /* styles for table formatted for project display*/
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    color: #000;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  th {
+    background-color: #b80b17;
+    color: white;
+  }
+  
   .calculator.link {
     color: #ff6600;
     text-decoration: none;
@@ -438,7 +457,7 @@ footer {
   }
   /* footer */
   h2 {
-    color: #b80b17;
+    color: #b80;
     font-size: 5rem;
     text-align: center;
   }
