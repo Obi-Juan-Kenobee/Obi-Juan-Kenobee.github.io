@@ -8,18 +8,16 @@
     margin: 0;
     padding: 0;
 }
+/* site wide background color */
 html {
     background-color: #000;
 }
+/* site wide font */
 body {
     font-family: "Montserrat",sans-serif;
     margin: 0;
   }
-  body > a:visited {
-    color: blueviolet;
-    
-  }
-  /*home link*/
+  /* link to homepage */ 
   .fixed {
     position: fixed;
     right: 2rem;
@@ -28,31 +26,12 @@ body {
     transition: 0.6s;
     animation: bounce 1s infinite alternate; /* Adjust animation if needed */
   }
-  
-  /* Header */
-  .header {
-    padding: 1rem 2rem;
-    background-color: #000;
-  }
   .fixed a {
     transition: all 0.3s ease-in-out; /* Adjust transition for desired speed */
   }  
-  h1 {
-      color: #B80B17;
-      font-size: 3rem;
-      font-weight: 900;
-      padding-top: 50px;
-      margin: auto;
-      text-align: center;
-  }
-  .name {
-    margin: 0;
-    font-size: 2rem;
-  }
-  #home {
-    /* position: absolute; */
-    top: 1rem;
-    /* left: 2rem; */
+  #home {  
+    position: absolute; 
+    top: 1rem; 
     right: 1rem;
     font-style: italic;
     font-size: 2.5rem;
@@ -60,8 +39,9 @@ body {
     color: #B80B17; /* Adjust color if needed */
     margin-bottom: 0;
     text-decoration: none; /* Remove underline from link */
-    opacity: 0.6;
+     opacity: 0.6;
   }
+  /* animation for home link */
   @keyframes bounce {
     0%,
     20%,
@@ -82,7 +62,24 @@ body {
     color: #ff6600; /* Adjust hover color if needed */
     opacity: 1;
   }
-  
+   
+  /* Header */
+  .header {
+    padding: 1rem 2rem;
+    background-color: #000;
+  }
+  h1 {
+    color: #B80B17;
+    font-size: 3rem;
+    font-weight: 900;
+    padding-top: 50px;
+    margin: auto;
+    text-align: center;
+}
+.name {
+  margin: 0;
+  font-size: 2rem;
+}
   
   /* Main Content */
   .main {
@@ -90,8 +87,8 @@ body {
     color: #ababab;
     margin: 3rem;
     line-height: 2rem;
-    /* font-weight: 900; */
-  }
+    font-weight: 900;
+   }
   
   .summary,
   .experience,
@@ -106,7 +103,7 @@ body {
   }
   h3 {
       color: #ff6600;
-  }
+  } 
   
   /* Experience Section */
   .job-list {
@@ -165,6 +162,9 @@ body {
 }
   
 @media screen and (min-width: 601px) and (max-width: 1023px) {
+#home {
+    font-size: 1.5rem;
+}
 main {
     padding: 4rem;
 }
