@@ -148,6 +148,11 @@ body {
   }
   footer > p > a {
     color: #ff6600;
+    text-decoration: none;
+  }
+  footer > p > a:hover {
+    color: #ababab;
+    text-decoration: underline;
   }
 
 .footer-nav a {

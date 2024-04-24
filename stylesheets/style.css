@@ -288,12 +288,7 @@ footer {
     object-fit: cover;
     max-width: 700px;
   }
-    /* #profile-bg {
-        z-index: -1;
-        position: relative;
-        top: 0;
-        left: 0;
-      } */
+  
   /*####################*/
 
     /* Main content */
@@ -323,6 +318,7 @@ footer {
   p {
     color: #ababab;
   }
+  
 /* styles for the archived projects page */
   /*####################*/
    /* styles for table formatted for project display*/
@@ -350,6 +346,7 @@ footer {
   }
   .calculator.link:hover {
     color: #ff6600;
+    text-decoration: underline;
   }
 
   /*####################*/
