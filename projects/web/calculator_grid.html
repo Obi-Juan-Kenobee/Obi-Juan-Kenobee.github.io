@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Grid</title>
+    <style>
+      body {
+        background-color: #b5d;
+        font-family: Arial, sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      nav a {
+        color: #3f6;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      nav a:hover {
+        color: #ff6;
+        text-decoration: underline;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 50px;
+      }
+      .container {
+        display: grid;
+        width: 900px;
+        height: 400px;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: "input input input";
+        place-content: center;
+        margin: auto;
+      }
+
+      .input {
+        /* input spanning 3 columns */
+        grid-area: input;
+        grid-column: 1 / 4;
+        display: block;
+        text-align: right;
+        margin: 0px;
+        border-radius: 10px;
+        font-size: 30px;
+      }
+
+      .button {
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        border: none;
+      }
+      h2 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 50px;
+      }
+      @media screen and (max-width: 600px) {
+        /* mobile version */
+        h1 {
+          font-size: 30px;
+        }
+        .container {
+          width: 300px;
+          margin: auto;
+        }
+        h2 {
+          font-size: 30px;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1200px) {
+        h1 {
+          font-size: 40px;
+        }
+        .container {
+          width: 600px;
+          margin: auto;
+        }
+        h2 {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../pages/archived.html">Back to Projects</a>
+    </nav>
+    <!-- A calculator using grid. -->
+    <h1>Calculator Grid</h1>
+    <div class="container">
+      <input class="input" type="text" />
+      <div class="button">C</div>
+      <div class="button">1</div>
+      <div class="button">2</div>
+      <div class="button">3</div>
+      <div class="button division">/</div>
+      <div class="button">4</div>
+      <div class="button">5</div>
+      <div class="button">6</div>
+      <div class="button remainder">%</div>
+      <div class="button">7</div>
+      <div class="button">8</div>
+      <div class="button">9</div>
+      <div class="button multiplication">*</div>
+      <div class="button">0</div>
+      <div class="button">.</div>
+      <div class="button subtraction">-</div>
+      <div class="button addition">+</div>
+      <div class="button">(</div>
+      <div class="button">)</div>
+      <div class="button power">^</div>
+      <div class="button equal">=</div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Juan Martinez.</p>
+    </footer>
+
+    <script>
+      let input = document.querySelector("input");
+      let buttons = document.querySelectorAll(".button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (button.innerHTML == "=") {
+            input.value = eval(input.value);
+          } else if (button.innerHTML == "C") {
+            input.value = "";
+            input.focus();
+          } else {
+            input.value += button.innerHTML;
+          }
+        });
+      });
+      // using enter key as equal button
+      document.addEventListener("keydown", (event) => {
+        if (event.key == "Enter") {
+          input.value = eval(input.value);
+        }
+      });
+    </script>
+  </body>
+</html>
