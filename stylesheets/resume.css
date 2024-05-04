@@ -17,52 +17,6 @@ body {
     font-family: "Montserrat",sans-serif;
     margin: 0;
   }
-  /* link to homepage */ 
-  .fixed {
-    position: fixed;
-    right: 2rem;
-    top: 3rem;
-    z-index: 100000;
-    transition: 0.6s;
-    animation: bounce 1s infinite alternate; /* Adjust animation if needed */
-  }
-  .fixed a {
-    transition: all 0.3s ease-in-out; /* Adjust transition for desired speed */
-  }  
-  #home {  
-    position: absolute; 
-    top: 1rem; 
-    right: 1rem;
-    font-style: italic;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #B80B17; /* Adjust color if needed */
-    margin-bottom: 0;
-    text-decoration: none; /* Remove underline from link */
-     opacity: 0.6;
-  }
-  /* animation for home link */
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-  
-  #home:hover { /* Hover effect (optional) */
-    color: #ff6600; /* Adjust hover color if needed */
-    opacity: 1;
-  }
-   
   /* Header */
   .header {
     padding: 1rem 2rem;
@@ -166,12 +120,22 @@ body {
   text-decoration: underline;
 }
   
-@media screen and (min-width: 601px) and (max-width: 1023px) {
+@media screen and (min-width: 500px) and (max-width: 1023px) {
 #home {
     font-size: 1.5rem;
 }
 main {
-    padding: 4rem;
+    padding: 3rem;
+    margin: 0;
 }
     
+}
+
+@media screen and (max-width: 499px) {
+
+  main{
+    padding: 1rem !important;
+    margin: 0 !important;
+  }
+  
 }

@@ -106,7 +106,7 @@ p > a {
   display: none;
 }
 #profile-face {
-  max-width: 400px;
+  max-width: 350px;
   border-radius: 50%;
   border: 3px solid #ababab;
   object-fit: contain;
@@ -191,7 +191,8 @@ input[type="submit"] {
 /*####################*/
 table {
   border-collapse: collapse;
-  width: 100%;
+  font-weight: 600;
+  width: 90vw;
 }
 th,
 td {
@@ -278,12 +279,16 @@ footer {
   }
 
   .topnav a:hover { /* Change the color of links on hover */
-    background-color: #ff6600;
+    background-color: #ababab;
     color: black;
   }
 
  .topnav a.active { /* Add an active class to highlight the current page */
     color: #ababab;
+  }
+  .topnav a.active:hover {
+    background-color: #ababab;
+    color: black;
   }
 
   /* main content styles */
@@ -350,6 +355,7 @@ footer {
    /* styles for table formatted for project display*/
   table {
     border-collapse: collapse;
+    font-weight: 900;
     width: 100%;
   }
   th,

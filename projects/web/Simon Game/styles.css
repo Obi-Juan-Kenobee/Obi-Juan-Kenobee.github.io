@@ -9,6 +9,23 @@ body {
   margin:  5%;
   color: #FEF2BF;
 }
+/* styles for menu for mobile devices */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
 
 .container {
   display: block;
@@ -50,4 +67,10 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media screen and (max-width: 600px) {
+  /* mobile version */
+  
+  
 }
