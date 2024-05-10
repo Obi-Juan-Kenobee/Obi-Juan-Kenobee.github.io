@@ -20,7 +20,6 @@ body {
 }
 /* nav bar styles */
 .topnav { /* Add a black background color to the top navigation */
-  background-color: #000;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -41,8 +40,8 @@ body {
 }
 
 .topnav a.active { /* Add an active class to highlight the current page */
-  background-color: #b80b17;
-  color: #ababab;
+  background-color: #f60;
+  color: #000;
 }
 .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -94,6 +93,7 @@ h2 {
 
 p {
   font-weight: 900;
+  line-height: 2rem;
 }
 
 p > a {
@@ -271,7 +271,7 @@ footer {
   .topnav a {
     float: left;
     display: block;
-    color: #b80b17;
+    color: #f60;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -283,9 +283,6 @@ footer {
     color: black;
   }
 
- .topnav a.active { /* Add an active class to highlight the current page */
-    color: #ababab;
-  }
   .topnav a.active:hover {
     background-color: #ababab;
     color: black;

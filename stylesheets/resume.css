@@ -16,6 +16,49 @@ html {
 body {
     font-family: "Montserrat",sans-serif;
     margin: 0;
+    font-weight: 900;
+    color: #ababab;
+  }
+  /* nav bar styles */
+.topnav { /* Add a black background color to the top navigation */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.topnav a { /* Style the links inside the navigation bar */
+  float: left;
+  display: block;
+  color: #ababab;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover { /* Change the color of links on hover */
+  background-color: #ababab;
+  color: black;
+}
+
+.topnav a.active { /* Add an active class to highlight the current page */
+  background-color: #f60;
+  color: #000;
+}
+.topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
   /* Header */
   .header {
@@ -36,13 +79,10 @@ body {
 }
   
   /* Main Content */
-  .main {
-    padding: 4rem;
-    color: #ababab;
-    margin: 3rem;
-    line-height: 2rem;
-    font-weight: 900;
-   }
+  main{
+    padding: 1rem !important;
+    margin: 0 !important;
+  }
   
   .summary,
   .experience,
@@ -131,11 +171,48 @@ main {
     
 }
 
-@media screen and (max-width: 499px) {
-
-  main{
-    padding: 1rem !important;
-    margin: 0 !important;
+@media screen and (min-width: 1024px) {
+    /* topnav styles */
+  #burger-menu {
+    display: none;
   }
+  .topnav a:not(:first-child) {display: inline-block;}  .topnav .icon {
+    display: none;
+  }
+  .topnav {
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  } 
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f60;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover { /* Change the color of links on hover */
+    background-color: #ababab;
+    color: black;
+  }
+
+  .topnav a.active:hover {
+    background-color: #ababab;
+    color: black;
+  }
+   .main {
+    padding: 4rem;
+    color: #ababab;
+    margin: 4rem!important;
+    line-height: 2rem;
+    font-weight: 900;
+   }
   
 }

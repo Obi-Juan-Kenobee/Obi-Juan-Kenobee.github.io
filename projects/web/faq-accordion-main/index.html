@@ -17,154 +17,30 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Frontend Mentor | FAQ accordion</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 16px;
-        text-align: center;
-        color: hsl(228, 45%, 44%);
-        margin-top: 90%;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Work Sans", sans-serif;
-        font-size: 16px;
-        background: hsl(275, 100%, 97%);
-      }
-
-      header {
-        /* background: hsl(273, 75%, 66%); */
-        /* background: linear-gradient(
-          180deg,
-          hsl(273, 75%, 66%) 0%,
-          hsl(240, 73%, 65%) 100%
-        ); */
-        width: 100%;
-        height: 14rem;
-      }
-
-      header img {
-        width: 100%;
-      }
-      .mobile {
-        display: none;
-      }
-      .faq > img {
-        margin-right: 5px;
-      }
-      .faq {
-        /* centering the content */
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: hsl(0, 0%, 100%);
-        width: 600px;
-        border-radius: 20px;
-        padding: 30px;
-      }
-
-      h1 {
-        color: hsl(292, 42%, 14%);
-        font-weight: 700;
-        font-size: 2.5rem;
-        display: inline-block;
-        margin-left: 5px;
-      }
-
-      h3 {
-        display: inline;
-        font-weight: 700;
-        margin: 10px 10px 10px 0;
-        color: hsl(292, 42%, 14%);
-      }
-      .accordion-item-header { 
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-        background: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        padding: 10px;
-        cursor: pointer;
-      }
-
-      .accordion-item-body {
-        display: none;
-        margin-bottom: 10px;
-        background: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        padding: 10px;
-      }
-
-      .accordion-item-body p {
-        color: hsl(240, 6%, 50%);
-        font-weight: 400;
-        margin-bottom: 10px;
-        font-size: 1rem;
-        line-height: 2rem;
-        letter-spacing: 0.5px;
-      }
-
-      .accordion-item-header img {
-        margin-left: auto;
-      }
-
-      .plus {
-        display: inline;
-        margin-left: auto;
-        padding: 10px;
-      }
-
-      .minus {
-        display: none;
-        margin-left: auto;
-        padding: 10px;
-      }
-
-      .accordion-item-header:hover {
-        background: hsl(240, 5%, 91%);
-      }
-    
-      .active .plus {
-        display: none;
-      }
-      .active .minus {
-        display: inline;
-      }
-      /* media query for mobile*/
-      @media screen and (max-width: 499px) {
-        .faq {
-          position: relative;
-          width: 400px;
-        }
-
-        header img {
-          width: 100vw;
-        }
-
-        .mobile {
-          display: block;
-        }
-
-        .desktop {
-          display: none;
-        }
-      }
-    </style>
   </head>
   <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../pages/resume.html">Resume</a>
+      <a href="../../../pages/javascript_class.html" class="active">Projects</a>
+      <!-- <a href="pages/projects.html">Projects</a> -->
+      <a href="../../../pages/contact.html">Contact</a>
+      <a href="javascript:void(0);" id="burger-menu" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <header>
       <img src="./assets/images/background-pattern-desktop.svg" class="desktop" />
       <img src="./assets/images/background-pattern-mobile.svg" class="mobile" />
@@ -248,21 +124,7 @@
         >. Coded by <a href="https://obi-juan-kenobee.github.io/" target="_blank">Juan Martinez</a>.
       </div>
     </footer>
-    <script>
-      const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-      accordionItemHeaders.forEach((accordionItemHeader) => {
-        accordionItemHeader.addEventListener("click", () => {
-          accordionItemHeader.classList.toggle("active");
-          accordionItemHeader.nextElementSibling.classList.toggle("active");
-          // displaying the text in acoordeion-item-body after user clicks on the plus sign
-          const accordionItemBody = accordionItemHeader.nextElementSibling;
-          if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.display = "block";
-          } else {
-            accordionItemBody.style.display = "none";
-          }
-      });
-    });
-    </script>
+
+    <script src="./main.js"></script>
   </body>
 </html>

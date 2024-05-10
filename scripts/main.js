@@ -1,7 +1,7 @@
 // nav bar function
  // toggle between removing and adding the "responsive" class to topnav when the user clicks on the icon
  function myFunction() {
-    var x = document.getElementById("myTopnav");
+    let x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
     } else {
@@ -33,10 +33,10 @@
 
   // Calculator function for howework project
 function calculate() {
-    var num1 = document.getElementById("value1").value;
-    var num2 = document.getElementById("value2").value;
-    var operator = document.getElementById("operator").value;
-    var result;
+    let num1 = document.getElementById("value1").value;
+    let num2 = document.getElementById("value2").value;
+    let operator = document.getElementById("operator").value;
+    let result;
 
     if (operator == "+") {
         result = parseInt(num1) + parseInt(num2);

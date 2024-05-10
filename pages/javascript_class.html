@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Martinez | Projects</title>
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        h3 {
+            color: #b80;
+            font-size: 2rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .link {
+            color: #f60;
+            font-size: 1rem;
+        }
+        span {
+            color: #b80;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="#" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a
+        href="javascript:void(0);"
+        id="burger-menu"
+        class="icon"
+        onclick="myFunction()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="container">
+      <main>
+        <header>
+          <h1>Projects</h1>
+        </header>
+        <h3>Simple Calculator</h3>
+        <p>
+          A simple calculator that performs basic arithmetic.
+          JavaScript was used for the following class requirements:<br />
+          <span>Functions</span> - a function was created to handle all of the arithmetic
+          operations.<br />
+          <span>Variables</span> - variables were created to store the value of user input.<br>
+          <span>Data Types</span> - JS's ParseInt and ParseFloat functions were used to convert the user input into numbers.<br>
+          <span>Comparison and Conditionals</span> - a simple if statement was used to determine if a user input was a number or not.<br>
+          <span>Demo Link</span> - <a class="link" href="../projects/web/calculator.html">Live Demo</a>
+        </p>
+
+        <h3>Dice Rolling Game</h3>
+        <p>
+          A simple dice rolling game. JavaScript was used for the following class
+          requirements:<br />
+          <span>Variables</span> - variables were used to generate a random number from 1 to 6.
+          Fetch and store a die image that displayed the face of the die corresponding to the random number.
+          <br>
+          <span>Comparison and Conditionals</span> - Used to check which of the two players had rolled the highest number.<br>
+          <span>DOM Manipulation</span> - Used to change the image of the die to the face of the die corresponding to the random number.
+          And to change the text of the winner.<br>
+          <span>Demo Link</span> - <a class="link" href="../projects/web/Dice Roll/dicee.html">Live Demo</a>
+        </p>
+        
+        <h3>Drum Kit</h3>
+        <p>
+          A drum kit that plays sounds. JavaScript was used for the following class
+          requirements:<br />
+          <span>Functions</span> - functions were created to play the sound of each drum.
+          And to animate the drum buttons.<br>
+          <span>Variables</span> - variables were used to store the sound of each drum. 
+          They were also used to add an even listener to each drum button through the DOM.
+          <br>
+          <span>Loops</span> - for loop used to add an event listener to each drum button and to play and animate the corresponding drum button.<br>
+          <span>Event Listeners</span> - Event listeners were used to play the sound of each drum.<br>
+          <span>Switch Statements</span> - switch statement was used to figure out which sound to play.<br>
+          <span>Demo Link</span> - <a class="link" href="../projects/web/Drum Kit/index.html">Live Demo</a>
+        </p>
+
+        <h3>Simon Game</h3>
+        <p>
+          A game based on the Simon Game. JavaScript was used for the following class
+          requirements:<br />
+          <span>Functions</span> - several functions were created for this game, this is my most complex javascript project 
+          so far. There are functions to play the sounds of each corresponding button, a function to start the game over,
+          a function to find the next sequence, a function to animate the buttons as they are pressed,
+          as well as a function to check the that user input (the pattern) matches the generated pattern.<br>
+          <span>Variables</span> - variables were used to store counters, arrays for the generated pattern and the user's pressed pattern.
+          <br>
+          <span>Comparison and Conditionals</span> - used to check if the user input matches the generated pattern.<br>
+          <span>DOM Manipulation</span> - used to animate buttons pressed, and to play sounds for the corresponding colored buttons.
+          Change the h1 text, display when the game was over and to briefly change the background color to red to 
+          indicate the wrong button was pressed and the game was over.<br>
+          <span>Animations</span> - animations were used to animate the buttons pressed everytime a new sequence is generated.<br>
+          <span style="color: greenyellow;">Bonus</span> - added regexp to check if the user was using a mobile device.
+          The game know works well with taps on the screen, and text updates accordingly to let user know they can tap the screen.<br>
+          <span>Demo Link</span> - <a class="link" href="../projects/web/Simon Game/index.html">Live Demo</a>
+        </p>
+
+        <h3>Forms & Validation</h3>
+        <p>
+          A simple form validation. JavaScript was used for the following class
+          requirements:<br />
+          <span>Validation</span> - used client side validation to check whether the length of input for the name, email and comment
+          is less than their specified limit. It is initially red using CSS :invalid and will turn green when it is valid.
+          The email was also validated using regex.<br>
+          <span>Demo Link</span> - <a class="link" href="./contact.html">Live Demo</a>
+        </p>
+
+        <h3>A FAQ accordion</h3>
+        <p>
+          A FAQ accordion. JavaScript was used for the following class
+          requirements:<br />
+          <span>Variables</span> - to store the DOM elements.<br>
+          <span>Comparison and Conditionals</span> - used to expand and collapse the accordion when clicked.<br>
+          <span>Demo Link</span> - <a class="link" href="../projects/web/faq-accordion-main/index.html">Live Demo</a>
+        </p>
+        <p style="text-align: center">
+          *This website is still under development.*
+        </p>
+      </main>
+      <!-- <p id="touch">Tap anywhere</p> -->
+    </div>
+
+    <footer>
+      <small>Copyright © 2024 Juan Martinez. All Rights Reserved.</small><br />
+      <small>jmart237@asu.edu</small>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

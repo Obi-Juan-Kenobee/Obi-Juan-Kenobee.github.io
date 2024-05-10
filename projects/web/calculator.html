@@ -1,131 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Juan Martinez
         Mesa Community College
         4/07/24
         CIS 166 Number Games -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    >
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Calculator</title>
     <style>
-        /* styles for calculator */
-        body {
-            background-color: #333;
-            color: white;
-            font-size: 2rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+      /* styles for calculator */
+      body {
+        background-color: #000;
+        color: #ababab;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      .topnav {
+        /* Add a black background color to the top navigation */
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .topnav a {
+        /* Style the links inside the navigation bar */
+        float: left;
+        display: block;
+        color: #ababab;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        /* Change the color of links on hover */
+        background-color: #ababab;
+        color: black;
+      }
+
+      .topnav a.active {
+        /* Add an active class to highlight the current page */
+        background-color: #ff6600;
+        color: #000;
+      }
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+      .topnav.responsive {
+        position: relative;
+      }
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+        form {
+          width: 100%;
         }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            margin-top: 20px;
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: #ff6600;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ff6600;
+      }
+      #result {
+        text-align: center;
+      }
+
+      footer {
+        font-size: large;
+      }
+
+      @media screen and (min-width: 1024px) {
+        /* topnav styles */
+        #burger-menu {
+          display: none;
         }
-        nav a {
-            color: #B80B17;
-            text-decoration: none;
-            margin: 10px;
+        .topnav a:not(:first-child) {
+          display: inline-block;
         }
-        nav a:hover {
-            color: #ff6600;
+        .topnav .icon {
+          display: none;
+        }
+        .topnav {
+          background-color: #000;
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #ff6600;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          /* Change the color of links on hover */
+          background-color: #ababab;
+          color: black;
+        }
+        .topnav a.active:hover {
+          background-color: #ababab;
+          color: black;
         }
         form {
-            margin: auto;
-            width: 260px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2rem;
-        }
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2rem;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            background-color: #B80B17;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #ff6600;
-        }
-        #result {
-            text-align: center;
-        }
-
-        footer {
-            font-size: large;
-        }
-
-        @media screen and (max-width: 601px) {
-            form {
-                width: 100%;
-            }
-        }
+        margin: auto;
+        width: 260px;
+      }
+      }
     </style>
-</head>
-<body>
-    <nav>
-        <a href="../../index.html">Home</a>
-        <a href="../../pages/archived.html">Back to Projects</a>
-    </nav>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../../index.html">Home</a>
+      <a href="../../pages/resume.html">Resume</a>
+      <a href="../../pages/archived.html" class="active">Projects</a>
+      <!-- <a href="pages/projects.html">Projects</a> -->
+      <a href="../../pages/contact.html">Contact</a>
+      <a
+        href="javascript:void(0);"
+        id="burger-menu"
+        class="icon"
+        onclick="myFunction()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <form>
-        <h1>Calculator</h1>
-        Value 1: <input type="text" placeholder="Enter value 1" id="value1">
-        Value 2: <input type="text" placeholder="Enter value 2" id="value2">
-        Operator: 
-        <select id="operator">
-            <option value="+">Add</option>
-            <option value="-">Subtract</option>
-            <option value="*">Multiply</option>
-            <option value="/">Divide</option>
-            <option value="%">Remainder</option>
-        </select>
-        <button type="button" onclick="calculate()">Calculate</button>
+      <h1>Calculator</h1>
+      Value 1:
+      <input type="text" placeholder="Enter value 1" id="value1" /> Value 2:
+      <input type="text" placeholder="Enter value 2" id="value2" />
+      Operator:
+      <select id="operator">
+        <option value="+">Add</option>
+        <option value="-">Subtract</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+        <option value="%">Remainder</option>
+      </select>
+      <button type="button" onclick="calculate()">Calculate</button>
 
-        <h2 id="result"></h2>
+      <h2 id="result"></h2>
 
-        <footer>
-            <small>&copy; Juan Martinez 2024</small>
-        </footer>
+      <footer>
+        <small>&copy; Juan Martinez 2024</small>
+        <br />
+        <small>jmart237@asu.edu</small>
+      </footer>
 
-        <script src="../../scripts/main.js"></script>
+      <script src="../../scripts/main.js"></script>
     </form>
-</body>
+  </body>
 </html>

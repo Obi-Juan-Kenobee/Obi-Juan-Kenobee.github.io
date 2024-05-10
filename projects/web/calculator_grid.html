@@ -3,37 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Calculator Grid</title>
     <style>
       body {
-        background-color: #b5d;
-        font-family: Arial, sans-serif;
+        background-color: #000;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        color: #ababab;
       }
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
+       .topnav {
+          /* Add a black background color to the top navigation */
+          overflow: hidden;
+          margin-bottom: 20px;
+        }
+
+        .topnav a {
+          /* Style the links inside the navigation bar */
+          float: left;
+          display: block;
+          color: #ababab;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          /* Change the color of links on hover */
+          background-color: #ababab;
+          color: black;
+        }
+
+        .topnav a.active {
+          /* Add an active class to highlight the current page */
+          background-color: #f60;
+          color: #ababab;
+        }
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+        .topnav.responsive {
+          position: relative;
+        }
+        .topnav.responsive a.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+         /* mobile version */
+        h1 {
+          text-align: center;
+          margin-top: 5%;
+          margin-bottom: 5%;
+          font-weight: 800;
+          font-size: 30px;
+        }
+        .container {
+        display: grid;
+        width: 400px;
+        height: 400px;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: "input input input";
+        place-content: center;
+        margin: auto;
       }
-      nav a {
-        color: #3f6;
-        text-decoration: none;
-        margin-right: 20px;
-        font-weight: bold;
+      .input {
+        /* input spanning 3 columns */
+        grid-area: input;
+        grid-column: 1 / 4;
+        display: block;
+        text-align: right;
+        margin: 0px;
+        border-radius: 10px;
+        font-size: 30px;
+      }
+       .button {
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 0px;
         font-size: 20px;
+        font-weight: bold;
+        color: black;
+        border: none;
+      }
+        h2 {
+          font-size: 30px;
+        }
+        footer {
+          margin-top: 5%;
+          text-align: center;
+          font-size: 20px;
+        }
+     
+      @media screen and (min-width: 1024px) {
+         /* topnav styles */
+      #burger-menu {
+        display: none;
+      }
+      .topnav a:not(:first-child) {
+        display: inline-block;
+      }
+      .topnav .icon {
+        display: none;
+      }
+      .topnav {
+        background-color: #000;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
       }
 
-      nav a:hover {
-        color: #ff6;
-        text-decoration: underline;
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f60;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
       }
+
+      .topnav a:hover {
+        /* Change the color of links on hover */
+        background-color: #ababab;
+        color: black;
+      }
+
+      .topnav a.active {
+        /* Add an active class to highlight the current page */
+        color: #000
+      }
+      .topnav a.active:hover {
+        background-color: #ababab;
+        color: black;
+      }
+
       h1 {
         text-align: center;
         margin-top: 50px;
         margin-bottom: 50px;
         font-size: 50px;
+        font-weight: 800;
       }
-      .container {
+       .container {
         display: grid;
         width: 900px;
         height: 400px;
@@ -79,20 +218,57 @@
         font-size: 20px;
         margin-top: 50px;
       }
-      @media screen and (max-width: 600px) {
-        /* mobile version */
-        h1 {
-          font-size: 30px;
-        }
-        .container {
-          width: 300px;
-          margin: auto;
-        }
-        h2 {
-          font-size: 30px;
-        }
+       
       }
-      @media screen and (min-width: 601px) and (max-width: 1200px) {
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        .topnav {
+          /* Add a black background color to the top navigation */
+          overflow: hidden;
+          margin-bottom: 20px;
+        }
+
+        .topnav a {
+          /* Style the links inside the navigation bar */
+          float: left;
+          display: block;
+          color: #ababab;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          /* Change the color of links on hover */
+          background-color: #ababab;
+          color: black;
+        }
+
+        .topnav a.active {
+          /* Add an active class to highlight the current page */
+          background-color: #f60;
+          color: #000;
+        }
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+        .topnav.responsive {
+          position: relative;
+        }
+        .topnav.responsive a.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
         h1 {
           font-size: 40px;
         }
@@ -107,10 +283,21 @@
     </style>
   </head>
   <body>
-    <nav>
+    <div class="topnav" id="myTopnav">
       <a href="../../index.html">Home</a>
-      <a href="../../pages/archived.html">Back to Projects</a>
-    </nav>
+      <a href="../../pages/resume.html">Resume</a>
+      <a href="../../pages/archived.html" class="active">Projects</a>
+      <!-- <a href="pages/projects.html">Projects</a> -->
+      <a href="../../pages/contact.html">Contact</a>
+      <a
+        href="javascript:void(0);"
+        id="burger-menu"
+        class="icon"
+        onclick="myFunction()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <!-- A calculator using grid. -->
     <h1>Calculator Grid</h1>
     <div class="container">
@@ -164,5 +351,6 @@
         }
       });
     </script>
+    <script src="../../scripts/main.js"></script>
   </body>
 </html>
