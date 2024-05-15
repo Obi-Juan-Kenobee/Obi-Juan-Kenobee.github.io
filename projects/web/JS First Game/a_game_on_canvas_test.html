@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../../stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../pages/resume.html">Resume</a>
+      <a href="../../../pages/javascript_class.html" class="active">Projects</a>
+      <a href="../../../pages/contact.html">Contact</a>
+      <a
+        href="javascript:void(0);"
+        id="burger-menu"
+        class="icon"
+        onclick="myFunction()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <main>
+      <h3>A game with vanilla JavaScript</h3>
+      <p>
+        This project is a work in progess.<br />It is a game that will be a
+        horizontal scrolling game (think of the old Mario Bros game in the
+        1980s).
+      </p>
+      <p>
+        This game will be built entirely with vanilla JavaScript, no frameworks
+        of any kind will be used.<br />
+        I will be using animations in canvas (which I am currently learning more
+        in depth).<br />
+        For now, you are able to only move the character with the arrow keys on
+        the keyboard.
+      </p>
+      <p>
+        *Note: This game displays on a mobile device, however, it does not
+        currently support mobile controls.
+      </p>
+
+      <div class="canvas-container">
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+
+      <img id="player" src="./assets/player.png" style="display: none" />
+    </main>
+
+    <script src="../../../scripts/main.js"></script>
+    <script type="module" src="./test_game.js"></script>
+  </body>
+</html>
