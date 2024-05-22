@@ -36,7 +36,7 @@ body {
   color: #b80b17;
   padding: 8px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.2rem;
 }
 
 .topnav a:hover {
@@ -62,6 +62,14 @@ body {
     text-align: left;
   }
 
+  .active {
+    background-color: #ff6600;
+  }
+
+  .topnav.responsive .active {
+    color: #000;
+  }
+
 /* #####MAIN CONTENT STYLES##### */
 
 a {
@@ -75,14 +83,10 @@ footer {
 @media screen and (min-width: 1024px) {
   /* #####NAV BAR STYLES##### */
 
-  #burger-menu {
-    display: none;
-  }
-
   .topnav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   
 }
