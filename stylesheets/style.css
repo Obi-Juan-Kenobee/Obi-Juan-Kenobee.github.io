@@ -43,7 +43,8 @@ body {
   background-color: #ff6600;
   color: black;
 }
-.topnav a:not(:first-child) {display: none;}
+/* .topnav a:not(:first-child) {display: none;} */
+.topnav a {display: none;}
 
 .topnav a.icon {
   float: right;
