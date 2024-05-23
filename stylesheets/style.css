@@ -87,12 +87,12 @@ footer {
     float: right;
   }
 
-  /* .topnav.responsive {
+  .topnav.responsive {
     position: absolute;
     top: 0;
     right: 0;
     color: #000;
-  } */
+  }
 .topnav.responsive a.icon {
     position: relative;
   }
