@@ -113,47 +113,16 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    /* topnav styles */
-  #burger-menu {
-    display: none;
-  }
-  .topnav a:not(:first-child) {display: inline-block;}  .topnav .icon {
-    display: none;
-  }
-  .topnav {
-    background-color: #000;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  } 
-
-  .topnav a {
-    float: left;
-    display: block;
-    color: #b80b17;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .topnav a:hover { /* Change the color of links on hover */
-    background-color: #ababab;
-    color: black;
-  }
-
-  .topnav a.active:hover {
-    background-color: #ababab;
-    color: black;
-  }
    .main {
     padding: 4rem;
     color: #ababab;
     margin: 4rem!important;
     line-height: 2rem;
     font-weight: 900;
+   }
+
+   h3 {
+    color: #b80;
    }
   
 }

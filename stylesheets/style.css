@@ -88,5 +88,14 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
   }
+
+  .topnav a:hover {
+    background-color: #b80;
+    color: #000;
+  }
+  .active {
+    background-color: #b80;
+    color: #000;
+  }
   
 }

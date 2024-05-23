@@ -64,7 +64,7 @@
         text-align: center;
         margin-top: 50px;
         margin-bottom: 50px;
-        font-size: 50px;
+        font-size: 5rem;
         font-weight: 800;
       }
        .container {
@@ -87,8 +87,5 @@
         .container {
           width: 600px;
           margin: auto;
-        }
-        h2 {
-          font-size: 40px;
         }
       }

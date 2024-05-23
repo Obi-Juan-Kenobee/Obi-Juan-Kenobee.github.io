@@ -40,3 +40,27 @@ p {
 span {
   color: #b80;
 }
+
+@media screen and (min-width: 1024px) {
+
+  main {
+    padding: 3rem;
+    margin: 10rem;
+      margin-top: 3rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+    color: #b80;
+  }
+
+  header p, header a {
+    font-size: 1.5rem;
+    color: #b80;
+  }
+  
+}

@@ -64,6 +64,13 @@
       @media screen and (min-width: 1024px) {
         form {
         margin: auto;
-        width: 360px;
+        width: 560px;
+      }
+
+      h1 {
+        font-size: 5rem;
+      }
+      button {
+        background-color: #b80;
       }
       }
