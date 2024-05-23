@@ -28,6 +28,11 @@ h3 {
   line-height: 1.5;
   text-align: center;
 }
+
+p {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
 .link {
   color: #f60;
   font-size: 1rem;

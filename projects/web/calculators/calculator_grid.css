@@ -1,0 +1,94 @@
+
+         /* mobile version */
+        h1 {
+          text-align: center;
+          margin-top: 3rem;
+          margin-bottom: 5%;
+          font-weight: 800;
+          font-size: 2.5rem;
+          color: #b80b17;
+        }
+        .container {
+        display: grid;
+        width: 400px;
+        height: 400px;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: "input input input";
+        place-content: center;
+        margin: auto;
+      }
+      .input {
+        /* input spanning 3 columns */
+        grid-area: input;
+        grid-column: 1 / 4;
+        display: block;
+        text-align: right;
+        margin: 0px;
+        border-radius: 10px;
+        font-size: 30px;
+        background-color: #ababab;
+      }
+       .button {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        border: none;
+      }
+      .clear {
+        background-color: #abaa;
+        color: #fff;
+      }
+
+      .equal {
+        background-color: #f60;
+      }
+        footer {
+          margin-top: 5%;
+          text-align: center;
+          font-size: 20px;
+        }
+     
+      @media screen and (min-width: 1024px) {
+   
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 50px;
+        font-weight: 800;
+      }
+       .container {
+        display: grid;
+        width: 900px;
+        height: 400px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 50px;
+      }
+       
+      }
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        h1 {
+          font-size: 40px;
+        }
+        .container {
+          width: 600px;
+          margin: auto;
+        }
+        h2 {
+          font-size: 40px;
+        }
+      }

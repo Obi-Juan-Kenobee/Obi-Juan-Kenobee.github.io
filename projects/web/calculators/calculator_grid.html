@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../stylesheets/style.css" />
+    <link rel="stylesheet" href="calculator_grid.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>John Martz | Calculator Grid</title>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../pages/resume.html">Resume</a>
+      <a href="../../../pages/web-development-projects.html" class="active">Projects</a>
+      <!-- <a href="pages/projects.html">Projects</a> -->
+      <a href="../../../pages/contact.html">Contact</a>
+      <a
+        href="javascript:void(0);"
+        id="burger-menu"
+        class="icon"
+        onclick="myFunction()"
+      >
+        <!-- <i class="fa fa-bars"></i> -->
+        J.Martz
+      </a>
+    </div>
+    <!-- A calculator using grid. -->
+    <h1>Calculator Grid</h1>
+    <div class="container">
+      <input class="input" type="text" pattern="[0-9]*" inputmode="numeric" />
+      <div class="button clear">C</div>
+      <div class="button">1</div>
+      <div class="button">2</div>
+      <div class="button">3</div>
+      <div class="button division">/</div>
+      <div class="button">4</div>
+      <div class="button">5</div>
+      <div class="button">6</div>
+      <div class="button remainder">%</div>
+      <div class="button">7</div>
+      <div class="button">8</div>
+      <div class="button">9</div>
+      <div class="button multiplication">*</div>
+      <div class="button">0</div>
+      <div class="button">.</div>
+      <div class="button subtraction">-</div>
+      <div class="button addition">+</div>
+      <div class="button">(</div>
+      <div class="button">)</div>
+      <div class="button power">^</div>
+      <div class="button equal">=</div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 John Martz.</p>
+    </footer>
+
+    <script>
+      let input = document.querySelector("input");
+      let buttons = document.querySelectorAll(".button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (button.innerHTML == "=") {
+            input.value = eval(input.value);
+          } else if (button.innerHTML == "C") {
+            input.value = "";
+            input.focus();
+          } else {
+            input.value += button.innerHTML;
+          }
+        });
+      });
+      // using enter key as equal button
+      document.addEventListener("keydown", (event) => {
+        if (event.key == "Enter") {
+          input.value = eval(input.value);
+        }
+      });
+    </script>
+    <script src="../../../scripts/main.js"></script>
+  </body>
+</html>

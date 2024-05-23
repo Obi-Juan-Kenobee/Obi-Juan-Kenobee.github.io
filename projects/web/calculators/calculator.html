@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../stylesheets/style.css" />
+    <link rel="stylesheet" href="calculator_simple.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>John Martz | Calculator</title>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../pages/resume.html">Resume</a>
+      <a href="../../../pages/web-development-projects.html" class="active">Projects</a>
+      <!-- <a href="pages/projects.html">Projects</a> -->
+      <a href="../../../pages/contact.html">Contact</a>
+      <a
+        href="javascript:void(0);"
+        id="burger-menu"
+        class="icon"
+        onclick="myFunction()"
+      >
+        <!-- <i class="fa fa-bars"></i> -->
+        J.Martz
+      </a>
+    </div>
+    <form>
+      <h1>Calculator</h1>
+      <p>Value 1:</p>
+      <input type="text" placeholder="Enter value 1" id="value1" /> 
+      <p>Value 2:</p>
+      <input type="text" placeholder="Enter value 2" id="value2" />
+      <p>Operator:</p>
+      <select id="operator">
+        <option value="+">Add</option>
+        <option value="-">Subtract</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+        <option value="%">Remainder</option>
+      </select>
+      <button type="button" onclick="calculate()">Calculate</button>
+
+      <h2 id="result"></h2>
+
+      <footer>
+        <small>&copy; 2024 John Martz</small>
+      </footer>
+
+      <script src="../../../scripts/main.js"></script>
+    </form>
+  </body>
+</html>
