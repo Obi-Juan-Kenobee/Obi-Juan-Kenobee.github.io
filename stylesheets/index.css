@@ -48,13 +48,14 @@ h2 a {
 @media screen and (min-width: 1024px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
-    margin: 40px;
+    margin: 60px;
+    margin-bottom: 20px;
     padding: 20px;
-    gap: 20px;
+    gap: 0px;
   }
 
   main {
@@ -66,9 +67,21 @@ h2 a {
     gap: 20px;
   }
 
+  .img-container {
+    display: inline-block;
+    background:linear-gradient(to left, black, transparent);
+  }
+
   #profile-bg {
-    display: block;
+    z-index: -1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 700px;
+    object-fit: cover;
+    
   }
 
   #profile-face {
@@ -157,7 +170,7 @@ h2 a {
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
-    transform: translate(10%, 0);
+    transform: translate(20%, 0);
     -webkit-transition-delay: 0.4s;
     -moz-transition-delay: 0.4s;
     -o-transition-delay: 0.4s;
@@ -175,7 +188,7 @@ h2 a {
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
-    transform: translate(47%, 0);
+    transform: translate(60%, 0);
     -webkit-transition-delay: 0.4s;
     -moz-transition-delay: 0.4s;
     -o-transition-delay: 0.4s;
