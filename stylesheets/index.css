@@ -155,7 +155,7 @@ h2 a {
     -moz-transform: translate(-150%, 0);
     -ms-transform: translate(-150%, 0);
     -o-transform: translate(-150%, 0);
-    transform: translate(150%, 0);
+    transform: translate(350%, 0);
   }
 
   /*  
