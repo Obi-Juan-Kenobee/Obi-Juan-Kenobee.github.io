@@ -46,6 +46,9 @@ h2 a {
 }
 
 @media screen and (min-width: 1024px) {
+  #burger-menu {
+    display: none;
+  }
   .container {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
