@@ -39,6 +39,12 @@
   h3 {
       color: #ff6600;
   } 
+
+  p {
+    text-align: justify;
+    margin-bottom: 0.5rem;
+  }
+  }
   
   /* Experience Section */
   .job-list {
