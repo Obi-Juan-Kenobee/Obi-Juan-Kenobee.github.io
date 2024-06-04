@@ -12,11 +12,12 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-## The Challenge
+## Overview
+
+### The Challenge
 
 From Frontend Mentor:
 
@@ -33,8 +34,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Repository URL](https://github.com/Obi-Juan-Kenobee/Obi-Juan-Kenobee.github.io/tree/main/projects/web/recipe-page)
+- Live Site URL: [Live site](https://obi-juan-kenobee.github.io/projects/web/recipe-page/index.html)
 
 ## My process
 

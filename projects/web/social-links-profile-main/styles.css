@@ -1,0 +1,81 @@
+   .attribution { font-size: 11px; text-align: center; margin: 20px; color: #fff;}
+    .attribution a { color: hsl(75, 94%, 57%); }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: hsl(0, 0%, 8%);
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: hsl(0, 0%, 12%);
+      max-width: 400px;
+      border-radius: 20px;
+      margin: 30% 20px;
+      overflow-y: auto;
+      padding: 30px;
+    }
+
+    img {
+      max-width: 100px;
+      border-radius: 50%;
+      border: 5px solid hsl(0, 0%, 12%);
+      margin: 5px auto;
+    }
+    h1 {
+      color: hsl(0, 0%, 100%);
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 1.9rem;
+    }
+
+    p {
+      color: hsl(0, 0%, 100%);
+      text-align: center;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .location {
+      color: hsl(75, 94%, 57%);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 0;
+    }
+
+    button {
+      background-color: hsl(0, 0%, 20%);
+      height: 50px;
+      border: none;
+      color: hsl(0, 0%, 100%);
+      border-radius: 5px;
+      margin: 8px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    button:active, button:hover, button:focus { 
+      background-color: hsl(75, 94%, 57%);
+      color: #000;
+    }
+    button:focus-visible {
+      outline: 2px solid hsl(7, 94%, 57%);
+    }
+
+    @media screen and (min-width: 600px) {
+      .card {
+        margin: 20% auto;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .card {
+        margin: 10% auto;
+      }
+      
+    }
