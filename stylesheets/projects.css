@@ -65,9 +65,21 @@ span {
     font-size: 5rem;
   }
 
+  header p a:hover,
+  header p a:focus,
+  header p a:active {
+    text-decoration: underline;
+  }
+
   .link {
     font-size: 1.2rem;
     color: #b80;
+  }
+
+  .link:hover,
+  .link:focus,
+  .link:active {
+    text-decoration: underline;
   }
 
   header p,

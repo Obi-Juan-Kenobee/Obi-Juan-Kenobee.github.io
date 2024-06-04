@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repo](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Repo](https://github.com/obi-juan-kenobee/Obi-Juan-Kenobee.github.io/tree/main/projects/web/social-links-profile-main)
+- Live Site URL: [Live Site](https://obi-juan-kenobee.github.io/projects/web/social-links-profile-main/index.html)
 
 ## My process
 
