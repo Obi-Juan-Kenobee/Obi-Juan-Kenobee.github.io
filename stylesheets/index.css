@@ -45,7 +45,13 @@ h2 a {
   color: #ff6600;
 }
 
-@media screen and (min-width: 1024px) {
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px), only screen and (max-width: 1920px) {
   #burger-menu {
     display: none;
   }
@@ -56,8 +62,9 @@ h2 a {
     align-items: center;
     justify-content: center;
     margin: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding: 20px;
+    padding-bottom: 0px;
     gap: 0px;
   }
 
@@ -80,12 +87,12 @@ h2 a {
   #profile-bg {
     z-index: -1;
     position: relative;
-    left: 15px;
+    /* left: 15px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 510px;
+    max-width: 546px;
     object-fit: cover;
     
   }
@@ -235,5 +242,15 @@ h2 a {
     -ms-transform: scale(0.3);
     -o-transform: scale(0.3);
     transform: scale(0.3);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .img-container {
+    left: 300px;
+  }
+
+  h1 {
+    font-size: 12rem;
   }
 }
