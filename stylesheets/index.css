@@ -247,10 +247,10 @@ footer {
 
 @media screen and (min-width: 1920px) {
   .img-container {
-    left: 300px;
+    left: 150px;
   }
 
   h1 {
-    font-size: 12rem;
+    font-size: 10rem;
   }
 }
