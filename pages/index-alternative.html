@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Tony Martz" />
+    <meta name="description" content="Tony Martz | Portfolio" />
+    <title>Tony Martz | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/index.css" />
+  </head>
+  <body>
+   <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="/pages/resume.html">Resume</a>
+      <a href="/pages/web-development-projects.html">Projects</a>
+      <a href="/pages/contact.html">Contact</a>
+      <a href="javascript:void(0);" id="burger-menu" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="container">
+      <div class="img-container">
+        <img
+          id="profile-face"
+          src="assets/JuanM_Face.jpg"
+          alt="Juan Martinez Mobile picture"
+        />
+        <img
+          id="profile-bg"
+          src="assets/JuanM_TopBackground.jpg"
+          alt="Juan Martinez Professional"
+        />
+      </div>
+      <main>
+        <header>
+          <!-- Simple header that is also the main content. -->
+          <h1><a href="./pages/resume.html" class="name" data-hover="Resume"><span id="name">Tony Martz</span></a></h1>
+        </header>
+        <h2><a href="./pages/web-development-projects.html" class="front-end" data-hover="Projects"><span id="front-end">Front-End</span></a></h2>
+        <h2><a href="#" class="web" data-hover="Python"><span id="web">Web</span></a></h2>
+        <h2><a href="./pages/contact.html" class="developer" data-hover="Contact"><span id="developer">Developer</span></a></h2>
+        <p style="font-size: 15px; text-align: center;">*This website is still under development.*</p>
+      </main>
+      <!-- <p id="touch">Tap anywhere</p> -->
+    </div>
+
+    <footer>
+      <small>Copyright © 2024 Tony Martz. All Rights Reserved.</small>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
