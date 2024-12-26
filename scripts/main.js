@@ -15,22 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
     name: {
       element: document.getElementById('name'),
       originalText: 'Juan Martinez',
-      hoverText: 'About'
+      hoverText: 'Resume'
     },
     frontEnd: {
       element: document.getElementById('front-end'),
       originalText: 'Front-End',
-      hoverText: 'Back-End'
+      hoverText: 'Projects'
     },
     web: {
       element: document.getElementById('web'),
       originalText: 'Web',
-      hoverText: 'Application'
+      hoverText: ''
     },
     developer: {
       element: document.getElementById('developer'),
       originalText: 'Developer',
-      hoverText: 'Developer'
+      hoverText: 'Contact'
     }
   };
 
