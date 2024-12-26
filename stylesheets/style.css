@@ -84,18 +84,23 @@ footer {
   /* #####NAV BAR STYLES##### */
 
   .topnav {
-    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .topnav.responsive {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #000;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
   }
-.topnav.responsive a.icon {
+
+  .topnav.responsive a.icon {
     position: relative;
   }
+  
   .topnav.responsive a {
     float: none;
     display: block;

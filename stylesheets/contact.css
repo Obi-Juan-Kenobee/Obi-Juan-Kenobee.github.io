@@ -1,296 +1,324 @@
+/* Modern Contact Page Styles */
+
 .container {
-  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
-h1,
-h2 {
+
+/* Header Styles */
+.contact-header {
   text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+h1 {
   color: #b80b17;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  line-height: 1.5;
-  text-align: center;
-  margin-top: 1rem;
-}
-p {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-p a {
+.contact-intro {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-intro p {
+  color: #ababab;
   font-size: 1.2rem;
-  color: #f60;
-  text-decoration: underline;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
-form {
+/* Grid Layout */
+.contact-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* Section Styles */
+.contact-methods, .contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+  color: #b80b17;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-form p {
-  margin-bottom: 1rem;
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(184, 11, 23, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon i {
+  font-size: 1.5rem;
+  color: #ff6600;
+}
+
+.social-info h3 {
+  color: #ff6600;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.social-info p {
+  color: #ababab;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
 label {
-  font-size: 1.2rem;
+  display: block;
+  color: #ff6600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  margin-bottom: 5px;
 }
 
-input,
-textarea {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+input, textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 1.2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ababab;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-input[type="submit"] {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  margin-top: 20px;
-  border-radius: 10px;
-  background-color: #f60;
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff6600;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #666;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #ff6600;
   color: #000;
   border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-}
-#submit {
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-#name,
-#message,
-#email:invalid {
-  background-color: #ababab;
-  border: none;
-  outline: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
 }
 
-#email:valid {
-  background-color: white;
-  border: none;
-  outline: 2px solid green;
-}
-#name:valid {
-  background-color: white;
-  border: none;
-  outline: 2px solid green;
+.submit-btn:hover {
+  background: #b80b17;
+  transform: translateY(-2px);
 }
 
-#message:valid {
-  background-color: white;
-  border: none;
-  outline: 2px solid green;
+.submit-btn i {
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Form Validation Styles */
+.required {
+  color: #ff6600;
+  margin-left: 4px;
+}
+
+.validation-message {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  min-height: 20px;
+  transition: all 0.3s ease;
+}
+
+.validation-message.error {
+  color: #ff4444;
+}
+
+.validation-message.success {
+  color: #00c851;
+}
+
+input.error, textarea.error {
+  border-color: #ff4444;
+  background: rgba(255, 68, 68, 0.05);
+}
+
+input.success, textarea.success {
+  border-color: #00c851;
+  background: rgba(0, 200, 81, 0.05);
+}
+
+input:invalid, textarea:invalid {
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+input:valid, textarea:valid {
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+/* Loading state for submit button */
+.submit-btn.loading {
+  position: relative;
+  cursor: wait;
+  opacity: 0.8;
+}
+
+.submit-btn.loading span,
+.submit-btn.loading i {
+  visibility: hidden;
+}
+
+.submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: #000;
+  border-right-color: #000;
+  border-radius: 50%;
+  animation: button-loading-spinner 0.8s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  z-index: 1000;
+  animation: slide-in 0.3s ease-out;
+}
+
+.notification.success {
+  background-color: #00c851;
+}
+
+.notification.error {
+  background-color: #ff4444;
+}
+
+.notification.fade-out {
+  animation: fade-out 0.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.footer small {
+  color: #ababab;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
-    padding: 3rem;
+    padding: 4rem;
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
   }
 
-  h2 {
-    font-size: 4rem;
-  }
-
-  p a {
-    color: #b80;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-
-  .email,
-  .linkedin,
-  .github {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-  }
-  .email span,
-  .linkedin span,
-  .github span {
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    -o-transition: 0.6s;
-    transition: 0.6s;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-  .email:before,
-  .email:after,
-  .linkedin:before,
-  .linkedin:after,
-  .github:before,
-  .github:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    text-align: center;
-    opacity: 0;
-    -webkit-transition: 0.4s, opacity 0.6s;
-    -moz-transition: 0.4s, opacity 0.6s;
-    -o-transition: 0.4s, opacity 0.6s;
-    transition: 0.4s, opacity 0.6s;
-  }
-
-  /* :before */
-
-  .email:before,
-  .linkedin:before,
-  .github:before {
-    content: attr(data-hover);
-    -webkit-transform: translate(-150%, 0);
-    -moz-transform: translate(-150%, 0);
-    -ms-transform: translate(-150%, 0);
-    -o-transform: translate(-150%, 0);
-    transform: translate(150%, 0);
-  }
-
-  /*  
-        We show :before pseudo-element on :hover 
-        and :after pseudo-element on :active 
-    */
-
-  .email:hover:before,
-  .email:active:after,
-  .linkedin:hover:before,
-  .linkedin:active:after,
-  .github:hover:before,
-  .github:active:after {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(-30%, 0);
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    -o-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-  }
-
-  /* 
-      We hide :before pseudo-element on :active
-    */
-
-  .email:active:before,
-  .linkedin:active:before,
-  .github:active:before {
-    -webkit-transform: translate(-150%, 0);
-    -moz-transform: translate(-150%, 0);
-    -ms-transform: translate(-150%, 0);
-    -o-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-  }
-  /* Span on :hover and :active */
-
-  .email:hover span,
-  .email:active span,
-  .linkedin:hover span,
-  .linkedin:active span,
-  .github:hover span,
-  .github:active span {
-    opacity: 0;
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    -ms-transform: scale(0.3);
-    -o-transform: scale(0.3);
-    transform: scale(0.3);
-  }
-
-  header > p,
-  h3,
-  form > p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  /* styling the submit button in the form */
-  input[type="submit"] {
-    background-color: #b80b;
-    border-radius: 5px;
-    border: none;
-    color: #ababab;
-    text-align: center;
-    cursor: pointer;
-    width: 130px;
-    font-weight: 900;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-  }
-
-  #submit:hover {
-    color: #000;
-    background-color: #b80;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  label {
-    color: #ababab;
+  .contact-intro p {
     font-size: 1.3rem;
-  }
-  .form-field {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  textarea {
-    /* aligning the text area */
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    background-color: #ababab;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 270px;
-  }
-  input {
-    background-color: #ababab;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
   }
 }
