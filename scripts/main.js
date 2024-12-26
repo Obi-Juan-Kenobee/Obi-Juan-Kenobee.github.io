@@ -1,53 +1,92 @@
 // nav bar function
- // toggle between removing and adding the "responsive" class to topnav when the user clicks on the icon
- function myFunction() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
+function myFunction() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
   }
-  // function to change text
-  function changeText() {
-    if (
-      document.getElementById("touch").innerHTML == "Tap anywhere" &&
-      document.getElementById("front-end").innerHTML == "Front-End" &&
-      document.getElementById("web").innerHTML == "Web" &&
-      document.getElementById("developer").innerHTML == "Developer" &&
-      document.getElementById("name").innerHTML == "Juan Martinez"
-    ) {
-      document.getElementById("touch").innerHTML = "Thank you!";
-      document.getElementById("front-end").innerHTML = "Back-End";
-      document.getElementById("web").innerHTML = "Application";
-      document.getElementById("developer").innerHTML = "Developer";
-      document.getElementById("name").innerHTML = "About";
+}
+
+// Mobile tap interaction
+document.addEventListener('DOMContentLoaded', function() {
+  const tapIndicator = document.querySelector('.tap-indicator');
+  const titleElements = {
+    name: {
+      element: document.getElementById('name'),
+      originalText: 'Juan Martinez',
+      hoverText: 'About'
+    },
+    frontEnd: {
+      element: document.getElementById('front-end'),
+      originalText: 'Front-End',
+      hoverText: 'Back-End'
+    },
+    web: {
+      element: document.getElementById('web'),
+      originalText: 'Web',
+      hoverText: 'Application'
+    },
+    developer: {
+      element: document.getElementById('developer'),
+      originalText: 'Developer',
+      hoverText: 'Developer'
+    }
+  };
+
+  let isShowingHoverText = false;
+
+  // Show/hide tap indicator based on screen size
+  function updateTapIndicator() {
+    if (window.innerWidth < 1024) {
+      tapIndicator.style.display = 'block';
     } else {
-      document.getElementById("touch").innerHTML = "Tap anywhere";
-      document.getElementById("front-end").innerHTML = "Front-End";
-      document.getElementById("web").innerHTML = "Web";
-      document.getElementById("developer").innerHTML = "Developer";
-      document.getElementById("name").innerHTML = "Juan Martinez";
+      tapIndicator.style.display = 'none';
     }
   }
 
-  // Calculator function for howework project
+  // Toggle between original and hover text
+  function toggleTexts() {
+    isShowingHoverText = !isShowingHoverText;
+    
+    Object.values(titleElements).forEach(({ element, originalText, hoverText }) => {
+      element.textContent = isShowingHoverText ? hoverText : originalText;
+      
+      // Add a subtle scale animation
+      element.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        element.style.transform = 'scale(1)';
+      }, 200);
+    });
+  }
+
+  // Add tap functionality
+  document.querySelector('.content-wrapper').addEventListener('click', toggleTexts);
+
+  // Update tap indicator on resize
+  window.addEventListener('resize', updateTapIndicator);
+
+  // Initial check
+  updateTapIndicator();
+});
+
+// Calculator function for homework project
 function calculate() {
-    let num1 = document.getElementById("value1").value;
-    let num2 = document.getElementById("value2").value;
-    let operator = document.getElementById("operator").value;
-    let result;
+  let num1 = document.getElementById("value1").value;
+  let num2 = document.getElementById("value2").value;
+  let operator = document.getElementById("operator").value;
+  let result;
 
-    if (operator == "+") {
-        result = parseInt(num1) + parseInt(num2);
-    } else if (operator == "-") {
-        result = parseInt(num1) - parseInt(num2);
-    } else if (operator == "*") {
-        result = parseInt(num1) * parseInt(num2);
-    } else if (operator == "/") {
-        result = parseInt(num1) / parseInt(num2);
-    } else if (operator == "%") {
-        result = parseInt(num1) % parseInt(num2);
-    }
-    document.getElementById("result").innerHTML = `${num1} ${operator} ${num2} = ${result}`; // displays result;
+  if (operator == "+") {
+    result = parseInt(num1) + parseInt(num2);
+  } else if (operator == "-") {
+    result = parseInt(num1) - parseInt(num2);
+  } else if (operator == "*") {
+    result = parseInt(num1) * parseInt(num2);
+  } else if (operator == "/") {
+    result = parseInt(num1) / parseInt(num2);
+  } else if (operator == "%") {
+    result = parseInt(num1) % parseInt(num2);
+  }
+  document.getElementById("result").innerHTML = `${num1} ${operator} ${num2} = ${result}`; // displays result;
 }

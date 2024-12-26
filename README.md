@@ -73,7 +73,3 @@ Feel free to reach out to me:
 - Email: jua2131999@maricopa.edu
 - LinkedIn: [linkedin.com/in/obi-juan-kenobi](https://linkedin.com/in/obi-juan-kenobi)
 - GitHub: [github.com/Obi-Juan-Kenobee](https://github.com/Obi-Juan-Kenobee)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
