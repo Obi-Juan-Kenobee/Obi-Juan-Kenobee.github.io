@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const titleElements = {
     name: {
       element: document.getElementById('name'),
-      originalText: 'Juan Martinez',
+      originalText: 'Tony Martz',
       hoverText: 'Resume'
     },
     frontEnd: {
