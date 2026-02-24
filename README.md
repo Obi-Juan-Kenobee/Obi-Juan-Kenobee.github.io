@@ -1,71 +1,52 @@
-# Personal Portfolio Website
+# Tony Martz | Personal Portfolio Website
 
-Welcome to my portfolio website repository! This website showcases my web development projects and professional experience.
+A responsive personal portfolio website built to showcase technical projects, professional experience, and skills. Designed with a mobile-first approach using vanilla HTML, CSS, and JavaScript.
 
-## 🚀 Features
+## Live Site
 
-- **Modern Design**: Clean and responsive layout with a consistent color theme
-- **Project Showcase**: Card-based layout displaying web development projects with live demos
-- **Interactive Resume**: Professionally designed resume page with skills, experience, and education
-- **Contact Form**: Secure contact form with real-time validation and user feedback
-- **Responsive**: Fully responsive design that works on all devices
+Hosted via GitHub Pages.
 
-## 🛠️ Technologies Used
+## Features
 
-### Frontend
-- HTML5
-- CSS3 (Modern features like Grid, Flexbox, Animations)
-- JavaScript (ES6+)
-- Font Awesome Icons
+- **Responsive Design** — Mobile-first layout that adapts seamlessly across all screen sizes
+- **Resume Page** — Professional resume with sections for summary, skills, education, projects, and experience
+- **Project Showcase** — Dedicated pages for individual web development projects with interactive demos
+- **Contact Page** — Easy way for visitors to get in touch
+- **Dark Mode Support** — Optimized styling for dark color schemes
 
-### Form Handling
-- Form validation with JavaScript
-- Secure form submission
-- Input sanitization and error handling
+## Tech Stack
 
-### Design
-- Modern card-based layouts
-- Smooth animations and transitions
-- Consistent color theme
-- Mobile-first approach
+- **Languages** — HTML5, CSS3, JavaScript (ES6+)
+- **Fonts** — Google Fonts (Montserrat)
+- **Icons** — Font Awesome 4.7
+- **Hosting** — GitHub Pages
 
-## 📱 Pages
+## Project Structure
 
-1. **Home**: Introduction and navigation
-2. **Projects**: 
-   - Card-based layout showcasing projects
-   - Categorized by technology (HTML/CSS, JavaScript)
-   - Links to live demos and source code
-3. **Resume**:
-   - Professional experience
-   - Skills and technologies
-   - Education background
-4. **Contact**:
-   - Contact form with validation
-   - Direct email link
-   - Social media links
+```
+personal-website/
+├── index.html              # Home / landing page
+├── resume.html             # Resume page
+├── projects.html           # Projects gallery
+├── styles/                 # CSS stylesheets (per-page)
+│   ├── style.css           # Global styles
+│   ├── index.css           # Home page styles
+│   ├── resume.css          # Resume page styles
+│   ├── projects.css        # Projects gallery styles
+│   └── ...                 # Individual project styles
+├── scripts/                # JavaScript files (per-page)
+│   ├── main.js             # Global scripts
+│   └── ...                 # Individual project scripts
+└── media/                  # Media assets
+```
 
-## 🎨 Color Theme
-- Primary Red: #b80b17
-- Secondary Orange: #ff6600
-- Neutral Gray: #ababab
+## Recent Updates
 
-## 🔄 Recent Updates
+See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes.
 
-- Added modern card-based project layout
-- Implemented comprehensive form validation
-- Enhanced responsive design
-- Added interactive hover effects
-- Improved accessibility
-- Updated contact form with real-time validation
+## Author
 
-## 🚧 Future Improvements
-
-- [ ] Add dark/light theme toggle
-- [ ] Implement more interactive animations
-- [ ] Add a blog section
-- [ ] Enhance SEO optimization
-- [ ] Add more project categories
+**Tony Martz** — Software Engineer
 
 ## 📬 Contact
 

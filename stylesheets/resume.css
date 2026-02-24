@@ -90,6 +90,10 @@
     text-align: justify;
     margin-bottom: 0.5rem;
   }
+
+  b {
+    color: #ff6600;
+  }
   
   /* Experience Section */
   .timeline {
@@ -180,6 +184,63 @@
     margin-bottom: 1.5rem;
   }
 
+  /* Skills Section Spacing */
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skills-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+  }
+
+  .skills-list li::before {
+    content: '•';
+    color: #ff6600;
+    position: absolute;
+    left: 0;
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .project-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-card li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .project-card li::before {
+    content: '•';
+    color: #ff6600;
+    position: absolute;
+    left: 0;
+  }
+
   .courses h4 {
     color: #ff6600;
     font-size: 1.1rem;
@@ -218,6 +279,14 @@
     .experience {
       grid-column: 1 / -1;
     }
+
+    .projects {
+      grid-column: 1 / -1;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media screen and (min-width: 1024px) {
@@ -253,33 +322,6 @@
     }
   }
 
-  /* Footer */
-  .footer {
-    padding: 1rem 2rem;
-    background-color: #262626;
-    color: #ffffff;
-    text-align: center;
-  }
-  footer > p > a {
-    color: #ff6600;
-    text-decoration: none;
-  }
-  footer > p > a:hover {
-    color: #ababab;
-    text-decoration: underline;
-  }
-
-  .footer-nav a {
-    color: #ff6600;
-    text-decoration: none;
-    margin: 10px;
-  }
-
-  .footer-nav a:hover {
-    color: #ababab;
-    text-decoration: underline;
-  }
-  
   @media screen and (min-width: 500px) and (max-width: 1023px) {
   #home {
       font-size: 1.5rem;
@@ -300,7 +342,18 @@
       font-weight: 900;
      }
 
-     h3 {
+     h3,
+     .job-header h3,
+     .degree-header h3,
+     .project-card h3,
+     .skill-category h3 {
+      color: #b80;
+     }
+
+     .job-duties li::before,
+     .courses li::before,
+     .project-card li::before,
+     .skills-list li::before {
       color: #b80;
      }
     
