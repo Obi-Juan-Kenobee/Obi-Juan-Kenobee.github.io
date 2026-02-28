@@ -89,6 +89,11 @@
   p {
     text-align: justify;
     margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  ul li {
+    font-weight: 600;
   }
 
   b {

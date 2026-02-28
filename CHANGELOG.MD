@@ -26,3 +26,19 @@ All notable changes to this project will be documented in this file.
 - Launched personal portfolio website with home, resume, projects, and contact pages
 - Mobile-first responsive design using vanilla HTML, CSS, and JavaScript
 - Hosted on GitHub Pages
+
+
+## [1.1.0] - 2026-02-26
+#### Added
+- New "Success" state message for the contact form to provide clear user feedback upon submission.
+
+#### Changed
+
+- Branding: Updated site copy to highlight engineering capabilities and full-stack project focus.
+
+
+- Form UI: Refined input labels and placeholder text in the "Get in Touch" section to improve professional tone .
+- +1
+
+
+- Links: Verified and updated external links to GitHub and LinkedIn for better professional alignment .
